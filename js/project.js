@@ -1,12 +1,14 @@
 
 // Holds the y-value of all h1 tags in order of appearance
 var positions = [];
-
+var video;
 // Event listeners
 window.addEventListener("load", function() {
 	getPositions(positions);
 	updateActive();
 	setNavAffixNames();
+	video = document.getElementsByTagName("video")[0];
+	setVideoVolume();
 });
 
 window.addEventListener("scroll", function() {
@@ -32,26 +34,34 @@ function getPositions(array) {
 	return array;
 }
 
-// Sets class to "active" for the correct tag in #nav_affix
+// Sets class to "current" for the correct tag in #nav_affix
 function updateActive() {
 	// Resets all classnames
 	for (var i=1; i<=positions.length; i++) {
-		$("#li"+i).removeClass();
+		$("a.li"+i).removeClass("current");
+		//$("span.li"+i).removeClass("glyphicon glyphicon-chevron-right");
 	}
-	// Updates the active element
+	// Updates the active element and adds a glyphicon
 	for (var j=1; j<=(positions.length); j++) {
 		if ((window.scrollY+110)>=positions[j-1] && (window.scrollY+100)<positions[j]) {
-			$("#li"+j).addClass("active");
+			$("a.li"+j).addClass("current");
+			//$("span.li"+j).addClass("glyphicon glyphicon-chevron-right");
+			console.log($("span.li"+j).attr("class"));
 			if (j!=1) {
-				$("#li"+(j-1)).removeClass();
+				$("a.li"+(j-1)).removeClass("current");
+				//$("span.li"+(j-1)).removeClass("glyphicon glyphicon-chevron-right");
 			}
 			if (j!=positions.length) {
-				$("#li"+(j+1)).removeClass();
+				$("a.li"+(j+1)).removeClass("current");
+				//$("span.li"+(j+1)).removeClass("glyphicon glyphicon-chevron-right");
 			}
 		}
 		if ((window.scrollY+300)>=positions[positions.length-1]) {
-			$("#li"+positions.length).addClass("active");
-			$("#li"+(positions.length-1)).removeClass();
+			$("a.li"+positions.length).addClass("current");
+			//$("span.li"+positions.length).addClass("glyphicon glyphicon-chevron-right");
+			console.log($("span.li"+positions.length).attr("class"));
+			$("a.li"+(positions.length-1)).removeClass("current");
+			//$("span.li"+(positions.length-1)).removeClass("glyphicon glyphicon-chevron-right");
 		}
 	}
 }
@@ -66,3 +76,15 @@ function setNavAffixNames() {
 	});
 }
 
+function setVideoVolume() {
+	video.volume = 0.6;
+}
+
+function videoControl() {
+	if (video.paused) {
+		video.play();
+	}
+	else {
+		video.pause();
+	}
+}

@@ -12,15 +12,22 @@
 }
 
 #nav_affix {
-  width: inherit; /*helps keep the content the same size on fluid layouts*/
-  position: fixed;
-  top: 70px;
+	width: inherit; /*helps keep the content the same size on fluid layouts*/
+	min-width: 300px;
+	position: fixed;
+	top: 77px;
+  	background-color: rgba(0, 0, 0, 0.6);
+	border: 2px solid rgba(221, 219, 219, 0.5);
+	border-top: none;
+	border-bottom: none;
 }
 
-.active {
-	background-color: white;
+.current {
+	left: 20px;
+	border-left: 3px solid #EEE;
+	color: white;
 	font-weight: bold;
-	left: 10px;
+	position: fixed;
 }
 
 h1 a {
@@ -37,4 +44,15 @@ h1 a:active {
 	color: rgba(0, 0, 0, 0.4);
 }
 
+kbd {
+	background-color: #BBB;
+	color: #000;
+}
 
+ul span {
+	position: relative;
+}
+
+.project {
+	margin-bottom: 35px;
+}
