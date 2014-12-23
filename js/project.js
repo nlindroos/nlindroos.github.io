@@ -39,29 +39,21 @@ function updateActive() {
 	// Resets all classnames
 	for (var i=1; i<=positions.length; i++) {
 		$("a.li"+i).removeClass("current");
-		//$("span.li"+i).removeClass("glyphicon glyphicon-chevron-right");
 	}
-	// Updates the active element and adds a glyphicon
+	// Updates the active element
 	for (var j=1; j<=(positions.length); j++) {
 		if ((window.scrollY+110)>=positions[j-1] && (window.scrollY+100)<positions[j]) {
 			$("a.li"+j).addClass("current");
-			//$("span.li"+j).addClass("glyphicon glyphicon-chevron-right");
-			console.log($("span.li"+j).attr("class"));
 			if (j!=1) {
 				$("a.li"+(j-1)).removeClass("current");
-				//$("span.li"+(j-1)).removeClass("glyphicon glyphicon-chevron-right");
 			}
 			if (j!=positions.length) {
 				$("a.li"+(j+1)).removeClass("current");
-				//$("span.li"+(j+1)).removeClass("glyphicon glyphicon-chevron-right");
 			}
 		}
 		if ((window.scrollY+300)>=positions[positions.length-1]) {
 			$("a.li"+positions.length).addClass("current");
-			//$("span.li"+positions.length).addClass("glyphicon glyphicon-chevron-right");
-			console.log($("span.li"+positions.length).attr("class"));
 			$("a.li"+(positions.length-1)).removeClass("current");
-			//$("span.li"+(positions.length-1)).removeClass("glyphicon glyphicon-chevron-right");
 		}
 	}
 }
