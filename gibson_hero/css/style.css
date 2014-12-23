@@ -1,0 +1,138 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+	background: url('../images/Background.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+@font-face {
+	font-family: hero;
+	src: url('../fonts/Hero.otf');
+}
+
+@font-face {
+	font-family: herolight;
+	src: url('../fonts/HeroLight.otf');
+}
+
+@font-face {
+	font-family: eternal;
+	src: url('../fonts/eternal.ttf');
+}
+
+canvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#startButton {
+	position: absolute;
+	left: 660px;
+	top: 350px;
+	height: 70px;
+	width: 200px;
+	margin-left: -100px;
+	margin-right: -35px;
+	margin-top: -200px;
+
+	z-index: 1001;
+	background-color: rgba(237, 0, 129, 0.9);
+	box-shadow: 2px 2px 2px #444444;
+	border-radius: 10px;
+    cursor:pointer;
+	border: none;
+	font-family: eternal;
+	color: #FFFFFF;
+	font-size: 40px;
+	text-align: center;
+}
+
+#stopButton {
+	position: absolute;
+	left: 900px;
+	top: 320px;
+	height: 70px;
+	width: 200px;
+	margin-left: -100px;
+	margin-right: -35px;
+	margin-top: -200px;
+	display: none;
+	z-index: 1001;
+	background-color: rgba(237, 0, 129, 0.9);
+	box-shadow: 2px 2px 2px #444444;
+	border-radius: 10px;
+    cursor:pointer;
+	border: none;
+	font-family: eternal;
+	color: #FFFFFF;
+	font-size: 40px;
+	text-align: center;
+}
+
+audio{
+	display:none;
+}
+
+img {
+	//position: absolute;
+	z-index: 700;
+}
+
+#overlay {
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 900;
+	display: none;
+}
+
+#gameScore {
+	position: absolute;
+	top: 120px;
+	left: 80px;
+	height: 50px;
+	width: 180px;
+	text-align: center;
+	z-index: 899;
+	font-family: eternal;
+	color: #FFFFFF;
+	border-radius: 10px;
+	font-size: 28px;
+	background-color: rgba(237, 0, 129, 0.9);
+	padding-top: 20px;
+}
+
+#help {
+	position: absolute;
+	left: 400px;
+	top: 250px;
+	height: 400px;
+	width: 500px;
+	z-index: 1001;
+	border: none;
+	font-family: eternal;
+	color: #FFFFFF;
+	font-size: 24px;
+	text-align: center;
+}
+
+em {
+	font-family: none;
+}
+
+h1 {
+	color: white;
+	position: absolute;
+	font-size: 60px;
+	font-family: eternal;
+	top: 20px;
+	left: 350px;
+}

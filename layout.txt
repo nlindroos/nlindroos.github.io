@@ -1,0 +1,41 @@
+Main:
+
+About me
+
+My interests careerwise include combining gained IT-related knowledge 
+
+
+About this website
+
+This website includes samples of my work associated to programming. The different projects are mainly samples from university courses at Aalto University (link). On this website you can also find my CV (link). These can be accessed through the navigation bar at the top of the page.
+
+This page is built on top of Twitter Bootstrap (http://getbootstrap.com/) and is viewable on all major browsers on a desktop PC as well as on any mobile device. Bootstrap is a mobile first, responsive front-end framework.
+
+
+About me
+
+My interests careerwise are combining (IT-related knowledge with managerial skills with a side of economics). I am currently studying Computer Science and Engineering (http://cse.aalto.fi/en/) at Aalto University. I have included quite a lot of courses in Industrial Engineering and Management (http://tuta.aalto.fi/en/) in my studies, and I therefore have an understanding of the theoretical side of broader decision making in businesses. 
+
+
+
+Contact information
+
+In case you have any questions or an exiting job offer at hand, please contact me using the contact information below.
+
+Niklas Lindroos
+niklas.a.lindroos@aalto.fi
++358 40 6822900
+
+
+
+##NOTE: Add CV:s in 3 languages? drop-down menu
+
+
+Aquarium
+Aquarium is a project window that can be used by both companies and their clients to view current information about a project. It is planned to be used as a supplementary communication tool. The source code is released as open source under the MIT License and can be found at https://github.com/futurice/aquarium.
+This project was initiated by link:Futurice as part of the Aalto University course link:T-76.4115 Software Development Project I.
+
+Maze Game
+
+
+

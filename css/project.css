@@ -1,0 +1,40 @@
+
+/* TODO: Format line under heading h1 */
+
+.main {
+	padding-top: 0px;
+	padding-bottom: 100px;
+}
+
+.page-header {
+	padding-top: 60px;
+	margin-top: -60px;
+}
+
+#nav_affix {
+  width: inherit; /*helps keep the content the same size on fluid layouts*/
+  position: fixed;
+  top: 70px;
+}
+
+.active {
+	background-color: white;
+	font-weight: bold;
+	left: 10px;
+}
+
+h1 a {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+h1 a:hover, h1 a:focus {
+	text-decoration: none;
+	text-shadow: none;
+	color: #428bca;
+}
+
+h1 a:active {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+

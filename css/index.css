@@ -1,0 +1,76 @@
+
+.img-circle {
+	border: 3px solid rgba(221, 219, 219, 0.5);
+	max-height: 275px;
+	margin-top: 10px;
+}
+
+/* TODO: Make this shadow thingy work */
+.inset_shadow {
+	position: absolute;
+	left: 0px;
+	right: 0px;	
+	top: 0px;
+	bottom: 0px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) inset;
+	border-radius: 50%;
+	z-index: 10;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+blockquote {
+	border: 0;
+}
+
+.qoute {
+	margin-top: 20px;
+/*	border-left: 0px;*/
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 2px solid rgba(221, 219, 219, 0.5);
+	border-left: 0;
+	border-right: 0;
+	color: #FFF;
+}
+
+#round-date {
+	left: 50px;
+    margin: 4px 29px 6px 0px;
+    float: left;
+    width: 67px;
+    height: 67px;
+    background: none repeat scroll 0% 0% #F9F9F9;
+    border: 2px solid rgb(71, 71, 78); /*#81B703*/
+    border-radius: 50%;
+    padding-top: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(71, 71, 78); /*#80B600*/	
+    line-height: 16px;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+}
+
+#dayOfMonth {
+	font-size: 19px;
+}
+
+#author {
+	font-style: italic;
+}
+
+.code {
+	padding: 0;
+	margin-top: 20px;
+	overflow-x: hidden;
+}
+
+#code {
+	width: 100%;
+	min-width: 1200px;
+}
+
+#contact {
+	display: block;
+	padding-left: 20px;
+	font-size: 1.5em;
+}

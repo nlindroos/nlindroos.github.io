@@ -1,0 +1,49 @@
+   General information about the game "President Evil":
+
+   "President Evil" is a text-based adventure game. The main point with the game is to walk around and examine rooms while discovering different items and enemies. 
+   Some items are completely useless, while others can be used against enemies. When you use these items to defeat enemies, they again drop new useful items. 
+   In the end you end up with the two key items that you should combine to blow away the last obstacle to finish the game. The enemies in the game are stationary 
+   and will not do anything to the player. The player however must regrettedly dispatch these enemies with specific items that work against specific enemies.
+
+   The only way to lose the game is to play past the fixed time limit.
+
+   We strongly recommend using the text UI for the best possible experience.
+
+   Note:
+   This game has a fair amount of politically incorrect humor and we hope that it will not offend anyone. 
+   We have nothing against the people who are the real-world examples of the characters in the game. The characters are all vastly exaggurated.
+
+   We do know that the title of the game may not be the most original out there but we thought that this particular name captured best the essence of our game.
+
+   We hope you enjoy the game!
+
+
+
+
+   Walkthrough for the game "President Evil"
+
+1. Prime Minister's Office - Type the character you want to play. This choice has no practical meaning for how the game will play.
+2. Lunchroom - Type "go south" and enter the Lunchroom, use the "search" command to find the video camera. 
+   Then use the command "get video camera" and after this the command "examine video camera" to learn more about the plot. 
+   It is important to pick up and examine the video camera. Otherwise you can not leave the Lunchroom.
+3. Side Chamber - Type "go west", use the "search" command and use the command "get map of Karjala" to pick up this essential item.
+4. Lunchroom - Type "go east".
+5. 3rd Floor Corridor - Type "go east", use the "search" command and use the command "get mark pouch" if you want to pick up this nonessential item.
+6. Janitor's Closet - Type "go south". Here you will face you first enemy. You can find out more about him by using the command "inspect". 
+   Defeat the enemy by typing "use map of Karjala". After defeating the enemy, use the "search" command. After this use "get detonator" to pick up the detonator, 
+   another essential item.
+7. 3rd Floor Lobby - Type "go east". 
+8. 2nd Floor East Lobby - Type "go downstairs". Use the "search" command and then the "get" command to pick up the minaret blueprint.
+9. 2nd Floor Main Lobby - Type "go west".
+10. Main Lobby - Type "go downstairs".
+11. Cloakroom - Type "go east".
+12. Shady Corridor - Type "go south". Here you will face Teuvo Hakkarainen, the next enemy you will fight. You can find out more about him by using the command "inspect". 
+    Defeat him by using the command "use minaret blueprint". Afterwards, use the "search" command and then the command "get C4-explosives".
+13. Men's Bathroom - Type "go west".
+14. Main Lobby - Type "go north". Now use the command "combine", which will combine the detonator and the C4-explosives to a bomb which will be necessary to complete the game.
+    "Combine" may be used earlier as well, it works right after you've acquired both the C4-explosives and the detonator.
+15. Entrance Hall - Type "go west". Now you will face the final boss, Timo Soini. Again, use "inspect" if you want. Destroy him by using the command "use bomb".
+16. End of Game - Type "go west". Congratulations, you've finished the game.
+
+    As you might have noticed, you don't need to fight all the enemies in the game or acquire all the items. Some of the items serve no other purpose than for your amusement.
+    The walkthrough described here is perhaps not the absolutely quickest way to finish the game, but we think it is the most clear-cut and straightforward one.

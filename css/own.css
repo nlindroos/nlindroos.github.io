@@ -1,0 +1,175 @@
+
+body {
+	padding-top: 60px;
+	background-color: #EEE;
+	background: url("../image/city-landscape.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+#name {
+	font-family: allura;
+	font-size: 30px;
+}
+
+.footer {
+    position: relative; /* fixed */
+    bottom: 0px;
+    height: auto;
+    width: 100%;
+    background-color: rgba(218, 218, 218, .9); /* #DDD*/
+    border-top: 2px solid rgba(46, 46, 46, 0.75);
+    padding: 10px 0px;
+    margin-top: 20px;
+}
+
+#copyright {
+	position: fixed;
+	bottom: 0%;
+	right: 0px;
+	text-align: right;
+}
+
+#date {
+	position: fixed;
+	bottom: 0%;
+	left: 10px;
+}
+
+/* Hide the date and copyright when screen size is small enough */
+@media only screen and (max-width: 1092px) {
+    #date {
+        display: none;
+    }
+    #copyright {
+    	display: none;
+    }
+}
+
+/* 991px - md to sm */
+@media only screen and (max-width: 991px) {
+	#name {
+		font-size: 24px;
+	}
+	#title {
+		display: none;
+	}
+}
+
+
+#descript {
+	color: #FFF;
+	/*margin-top: 20px;*/
+}
+
+#descript_text {
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 2px solid rgba(221, 219, 219, 0.5);
+	border-radius: 10px;
+	margin-top: 15px;
+}
+
+.img-circle {
+	border: 3px solid rgba(221, 219, 219, 0.5);
+	max-height: 275px;
+	margin-top: 10px;
+}
+
+/* TODO: Make this shadow thingy work */
+.inset_shadow {
+	position: absolute;
+	left: 0px;
+	right: 0px;	
+	top: 0px;
+	bottom: 0px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) inset;
+	border-radius: 50%;
+	z-index: 10;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+h1 {
+	color: rgba(0, 0, 0, 0.4);
+	text-shadow: 0 -1px 0 #FFF;
+}
+
+#descript {
+	
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+p {
+	color: #FFF;
+	margin-top: 20px;
+}
+
+/* Quote of the day */
+dl dt {
+	color: #FFF;
+}
+
+.qoute {
+	margin-top: 20px;
+/*	border-left: 0px;*/
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 2px solid rgba(221, 219, 219, 0.5);
+	border-left: 0;
+	border-right: 0;
+	color: #FFF;
+}
+
+.round-date {
+	left: 50px;
+    margin: 4px 29px 6px 0px;
+    float: left;
+    width: 67px;
+    height: 67px;
+    background: none repeat scroll 0% 0% #F9F9F9;
+    border: 2px solid rgb(71, 71, 78); /*#81B703*/
+    border-radius: 50%;
+    padding-top: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(71, 71, 78); /*#80B600*/	
+    line-height: 16px;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+}
+
+#dayOfMonth {
+	font-size: 19px;
+}
+
+#author {
+	font-style: italic;
+}
+
+blockquote {
+	border: 0;
+}
+
+@font-face {
+	font-family: allura;
+	src: url("../fonts/Allura-Regular.ttf");
+}
+
+.code {
+	padding: 0;
+	margin-top: 20px;
+	overflow-x: hidden;
+}
+
+#code {
+	width: 100%;
+	min-width: 1200px;
+}
+
+
+
+
