@@ -14,7 +14,7 @@ This page is built on top of Twitter Bootstrap (http://getbootstrap.com/) and is
 
 About me
 
-My interests careerwise are combining (IT-related knowledge with managerial skills with a side of economics). I am currently studying Computer Science and Engineering (http://cse.aalto.fi/en/) at Aalto University. I have included quite a lot of courses in Industrial Engineering and Management (http://tuta.aalto.fi/en/) in my studies, and I therefore have an understanding of the theoretical side of broader decision making in businesses. 
+My interests careerwise are combining (IT-related knowledge with managerial skills with a side of economics). I am currently studying Computer Science and Engineering (http://cse.aalto.fi/en/) at Aalto University. I have included quite a lot of courses in Industrial Engineering and Management (http://tuta.aalto.fi/en/) in my studies, and I therefore have an understanding of the theoretical side of broader decision making in businesses. I have a dream to someday be able to combine these both of theses areas of knowledge in an exiting position.
 
 
 
