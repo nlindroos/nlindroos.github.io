@@ -17,7 +17,7 @@ function addDate() {
 	var d = new Date();
 	var day = d.getUTCDate();
 
-	var monthShort = new Array();
+	var monthShort = [];
 	monthShort[0] = "Jan";
 	monthShort[1] = "Feb";
 	monthShort[2] = "Mar";
@@ -47,12 +47,13 @@ function addQuote() {
 	body.removeChild(dl);
 	body.removeChild(footer);
 
+
 	$("#quote").html(quote);
 	$("#author").html(author);
 }
 
 function checkQuote() {
-	var text = "The quote could not be loaded. (404)"
+	var text = "The quote could not be loaded. (404)";
 	if (loaded===0) {
 		$("#quote").html(text);
 		return true;

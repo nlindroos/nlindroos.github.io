@@ -2,6 +2,7 @@
 // Holds the y-value of all h1 tags in order of appearance
 var positions = [];
 var video;
+
 // Event listeners
 window.addEventListener("load", function() {
 	getPositions(positions);
@@ -38,22 +39,22 @@ function getPositions(array) {
 function updateActive() {
 	// Resets all classnames
 	for (var i=1; i<=positions.length; i++) {
-		$("a.li"+i).removeClass("current");
+		$("#li"+i).removeClass("current");
 	}
 	// Updates the active element
 	for (var j=1; j<=(positions.length); j++) {
 		if ((window.scrollY+110)>=positions[j-1] && (window.scrollY+100)<positions[j]) {
-			$("a.li"+j).addClass("current");
+			$("#li"+j).addClass("current");
 			if (j!=1) {
-				$("a.li"+(j-1)).removeClass("current");
+				$("#li"+(j-1)).removeClass("current");
 			}
 			if (j!=positions.length) {
-				$("a.li"+(j+1)).removeClass("current");
+				$("#li"+(j+1)).removeClass("current");
 			}
 		}
 		if ((window.scrollY+300)>=positions[positions.length-1]) {
-			$("a.li"+positions.length).addClass("current");
-			$("a.li"+(positions.length-1)).removeClass("current");
+			$("#li"+positions.length).addClass("current");
+			$("#li"+(positions.length-1)).removeClass("current");
 		}
 	}
 }

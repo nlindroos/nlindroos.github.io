@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="author" content="Niklas Lindroos">
+		<meta name="description" content="Professional website about Niklas Lindroos, hobbyist web developer from Espoo, Finland.">
+		<meta name="keywords" content="Niklas Lindroos, Niklas, Lindroos, professional website, Espoo, Finland">
 		<!--@TODO add favicon-->
 		<link rel="icon" href="image/favicon.ico">
 		<title>Portfolio - Niklas Lindroos</title>
@@ -28,7 +30,7 @@
 
 	</head>
 	<body>
-		<!--TODO: SSI: #include file="navbar.html" or <!-#include virtual="/file.txt" -->
+		<!--@TODO: SSI: #include file="navbar.html" or <!-#include virtual="/file.txt" -->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navbar">
 	      <div class="container">
 	        <div class="navbar-header">
@@ -57,14 +59,20 @@
 	    	<div class="row-fluid">
 	    		<div class="col-md-9 descript_text">
 	    			<div class="project">
+	    				<h1 class="page-header" id="website"><a href="http://users.aalto.fi/lindron1/projects.html">This website</a></h1>
+	    				<div><p>This website is built on top of the <a href="http://getbootstrap.com/" hreflang="en" type="text/html" target="_blank">Twitter Bootstrap</a> front-end framework and is viewable on all major browsers (IE >9) on a desktop PC as well as on any mobile device. Bootstrap is a mobile first, responsive front-end framework. The dynamic functionality is implemented mainly with jQuery.</p></div>
+	    			</div>
+	    			<div class="project">
 	    				<h1 class="page-header" id="akvaario"><a href="https://github.com/futurice/aquarium" target="_blank">Aquarium - Customer project window</a></h1>
-	    				<div><p>Aquarium is a project window that can be used by both companies and their clients to view current information about a project. It is planned to be used as a supplementary communication tool. The source code is released as open source under the MIT License and can be found at <a href="https://github.com/futurice/aquarium" target="_blank">https://github.com/futurice/aquarium</a>. An adaption of Scrum (agile software development framework) was used in the team, which consisted of 9 persons. The application is built upon the <a href="https://www.playframework.com/" target="_blank">Play Framework</a>, uses <a href="http://www.mongodb.org/" target="_blank">MongoDB</a> and Scala for the back-end and the <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> frameworks for the front-end.<br><br>
-						This project was initiated by <a href="http://futurice.com/" target="_blank">Futurice</a>, a Finnish software development company, as part of the Aalto University course <a href="https://noppa.aalto.fi/noppa/kurssi/t-76.4115/etusivu" target="_blank">T-76.4115 Software Development Project I</a>.</p><p></p></div>
+	    				<div>
+	    					<p>Aquarium is a project window that can be used by both companies and their clients to view current information about a project. It is designed to be used as a supplementary communication tool and project state check-up site. The source code is released as open source under the MIT License and can be found at <a href="https://github.com/futurice/aquarium" target="_blank">https://github.com/futurice/aquarium</a>. An adaption of Scrum (agile software development framework) was used in the team, which consisted of 9 persons. The application is built upon the <a href="https://www.playframework.com/" target="_blank">Play Framework</a>, uses <a href="http://www.mongodb.org/" target="_blank">MongoDB</a> and Scala for the back-end and the <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> frameworks for the front-end.</p><p>This project was initiated by <a href="http://futurice.com/" target="_blank">Futurice</a>, a Finnish software development company, as part of the Aalto University course <a href="https://noppa.aalto.fi/noppa/kurssi/t-76.4115/etusivu" target="_blank">T-76.4115 Software Development Project I</a>.</p><p></p></div>
 	    			</div>
 	    			<div class="row">
 		    			<div class="col-xs-12 col-lg-10 project">
 		    				<h1 class="page-header" id="gibson"><a href="gibson_hero/main.html" target="_blank">Gibson Hero</a></h1>
-		    				<div><p>Gibson Hero is a Guitar Hero-type game where the goal is to Gibson Hero is implemented using the HTML5 <i>canvas</i> element. CSS graphics are used in combination with JavaScript and the jQuery JavaScript library. The game Gibson Hero can be accessed <a href="gibson_hero/main.html" target="_blank">here</a> (or by clicking the title).<br><br>This game is designed and programmed by Niklas Lindroos and Teemu Karppinen.<br><br>Gameplay footage of Guitar Hero:</p></div>
+		    				<div>
+		    					<p>Gibson Hero is a Guitar Hero-type game where the goal is to Gibson Hero is implemented using the HTML5 <i>canvas</i> element. CSS graphics are used in combination with JavaScript and the jQuery JavaScript library. The game Gibson Hero can be accessed <a href="gibson_hero/main.html" target="_blank">here</a> (or by clicking the title). Please note that the game is only designed to work with a fairly recent version of Google Chrome (v31.0.1650.63 m or higher) on a desktop PC.<br><br>This game is designed and programmed by Niklas Lindroos and Teemu Karppinen.<br><br>Gameplay footage of Guitar Hero:</p>
+		    				</div>
 		    				<div align="center" class="embed-responsive embed-responsive-16by9">
 			    				<video controls onclick="videoControl()" class="embed-responsive-item">
 			    					<source src="video/gibson_gameplay.mp4" type="video/mp4">
@@ -75,28 +83,35 @@
 		    		</div>
 	    			<div class="project">
 	    				<h1 class="page-header" id="maze" alt="Example of the maze game"><a href="pdf/labyrinth.pdf">Maze game</a></h1>
-	    				<div><p>An example of what the game looks like: <br><br></p><div><a href="image/maze.jpg"><img src="image/maze.jpg" width="80%" class="img-thumbnail"></a></div><p>A description of the project, including the source code can be found <a href="pdf/labyrinth.pdf">here</a> (in Finnish). The source code folder can also be browsed through <a href="labyrinth/" target="_blank">this link</a> and downloaded through <a href="labyrinth/labyrinth.zip">this link</a>. The game is run by <kbd>cd</kbd>-ing into the correct folder and typing <kbd>python mainwindow.py</kbd> into a command-line interpreter. This naturally requires that Python is installed (v2.0 or higher).</p></div>
+	    				<div>
+	    					<p>This game includes a random maze generator and the goal is to navigate through the generated maze to the exit.<br><br>An example of what the game looks like: <br><br></p>
+	    					<div><a href="image/maze.jpg"><img src="image/maze.jpg" width="80%" class="img-thumbnail"></a></div>
+	    					<p>A description of the project, including the source code can be found <a href="pdf/labyrinth.pdf">here</a> (in Finnish). The source code folder can also be browsed through <a href="labyrinth/" target="_blank">this link</a> and downloaded through <a href="labyrinth/labyrinth.zip">this link</a>. The game is run by <kbd>cd</kbd>-ing into the correct folder and running <i>mainwindow.py</i> by typing <kbd>python mainwindow.py</kbd> into a command-line interpreter. This naturally requires that Python is installed (v2.0 or higher).</p>
+	    				</div>
 	    			</div>
 	    			<div class="project">
 	    				<h1 class="page-header" id="president"><a href="president_evil/" target="_blank">President Evil</a></h1>
-	    				<div><p>Gibson Hero is a Guitar Hero-type game where the Gibson Hero is implemented using the HTML5 <i>canvas</i> element. CSS graphics are used in combination with JavaScript and the jQuery JavaScript library. The game Gibson Hero can be accessed <a href="gibson_hero/main.html" target="_blank">here</a> (or by clicking the title).<br><br>This game is designed and programmed by Niklas Lindroos and Teemu Karppinen.<br><br>Gameplay footage of Guitar Hero:</p></div>
+	    				<div>
+	    					<p>President Evil is a text-based game designed and programmed by Niklas Lindroos and Johan Gädda during the presidential election in Finland in 2012.</p><p>The source code for this game can be accessed <a href="president_evil/" target="_blank">here</a> and <a href="president_evil/president_evil.zip">downloaded here</a> (zip).</p><p>This game is run by extracting the zip package, <kbd>cd</kbd>-ing into the correct folder and running <i>adventure_text_UI.py</i> by typing <kbd>python adbenture_text_UI.py</kbd> into a command-line interpreter.</p>
+	    				</div>
 	    			</div>
 	    			<div class="project">
 	    				<h1 class="page-header" id="dops"><a href="pdf/dops.pdf">Design of Production Systems</a></h1>
 	    				<div><p>Gibson Hero is a Guitar Hero-type game where the Gibson Hero is implemented using the HTML5 <i>canvas</i> element. CSS graphics are used in combination with JavaScript and the jQuery JavaScript library. The game Gibson Hero can be accessed <a href="gibson_hero/main.html" target="_blank">here</a> (or by clicking the title).<br><br>This game is designed and programmed by Niklas Lindroos and Teemu Karppinen.<br><br>Gameplay footage of Guitar Hero:</p></div>
 	    			</div>
-	    		</div>
-	    		
+	    		</div>	
 	    	</div>
+	    	<!-- @TODO: Not perfect solution in FF or IE -->
 	    	<div class="row-fluid">
 			    <div class="col-md-3">
 					<div class="hidden-xs hidden-sm hidden-print">
 						<ul class="nav navbar" id="nav_affix">
-							<li><a href="#akvaario" class="li1"></a></li>
-							<li><a href="#gibson" class="li2"></a></li>
-							<li><a href="#maze" class="li3"></a></li>
-							<li><a href="#president" class="li4"></a></li>
-							<li><a href="#dops" class="li5"></a></li>
+							<li><a href="#website" id="li1"></a></li>
+							<li><a href="#akvaario" id="li2"></a></li>
+							<li><a href="#gibson" id="li3"></a></li>
+							<li><a href="#maze" id="li4"></a></li>
+							<li><a href="#president" id="li5"></a></li>
+							<li><a href="#dops" id="li6"></a></li>
 						</ul>				
 					</div>
 				</div>

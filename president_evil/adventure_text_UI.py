@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from President_Evil.adventure import Adventure
+from adventure import Adventure
 
 class Adventure_text_UI(object):
     '''

@@ -5,7 +5,7 @@ Created on Aug 30, 2011
 '''
 
 from Tkinter import *
-from President_Evil.adventure import Adventure
+from adventure import Adventure
 
 class Adventure_GUI(object):
     '''

@@ -350,8 +350,8 @@ class Window(QtGui.QMainWindow, QtGui.QWidget):
         '''
         QtGui.QMessageBox.question(self, 'Message',
                 "Your objective is to steer the blue square (player) to the\ngreen square (end). \
-Empty squares are passages and\nfilled squares are walls.\nYellow squares are north-southbridges and \
-cyan\nsquares are north-south bridges. The resign button\nshows a path to the end from the current square.", QtGui.QMessageBox.Ok, QtGui.QMessageBox.Ok)
+Empty squares are passages and\nfilled squares are walls.\n\nYellow squares are north-south bridges and \
+cyan\nsquares are west-east bridges. The resign button\nshows a path to the end from the current square.", QtGui.QMessageBox.Ok, QtGui.QMessageBox.Ok)
 
 
     def center(self):
