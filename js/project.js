@@ -73,7 +73,8 @@ function setVideoVolume() {
 	video.volume = 0.6;
 }
 
-function videoControl() {
+function videoControl(e) {
+	e.preventDefault();
 	if (video.paused) {
 		video.play();
 	}
