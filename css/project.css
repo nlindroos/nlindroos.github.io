@@ -30,6 +30,7 @@
 	position: fixed;
 }
 
+/* h1 a: Section headers */
 h1 a {
 	color: rgba(0, 0, 0, 0.4);
 }

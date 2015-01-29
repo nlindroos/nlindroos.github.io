@@ -3,7 +3,7 @@ window.addEventListener("load", function() {
 	// Adds the current date to the lower left corner
 	// N.B. Has to be done once window has loaded so as not to overwrite the HTML content
 	var d = new Date();
-	var dayArray = new Array();
+	var dayArray = [];
 	dayArray[0] = "Sunday";
 	dayArray[1] = "Monday";
 	dayArray[2] = "Tuesday";
@@ -13,7 +13,7 @@ window.addEventListener("load", function() {
 	dayArray[6] = "Saturday";
 	var vDay = dayArray[d.getUTCDay()];
 	var day = d.getUTCDate();
-	var month = new Array();
+	var month = [];
 	month[0] = "January";
 	month[1] = "February";
 	month[2] = "March";
