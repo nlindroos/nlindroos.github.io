@@ -52,6 +52,7 @@ function addQuote() {
 	$("#author").html(author);
 }
 
+// @TODO: return false?
 function checkQuote() {
 	var text = "The quote could not be loaded. (404)";
 	if (loaded===0) {
