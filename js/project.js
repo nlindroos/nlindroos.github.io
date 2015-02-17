@@ -1,29 +1,7 @@
 
 // Holds the y-value of all h1 tags in order of appearance
-var positions = [];
-var video;
-
-// Event listeners
-window.addEventListener("load", function() {
-	getPositions(positions);
-	updateActive();
-	setNavAffixNames();
-	video = document.getElementsByTagName("video")[0];
-	setVideoVolume();
-});
-
-window.addEventListener("scroll", function() {
-	updateActive();
-});
-
-window.addEventListener("resize", function() {
-	getPositions(positions);
-	updateActive();
-});
-
-window.addEventListener("click", function() {
-	updateActive();
-});
+var positions = [],
+video;
 
 // Returns an array with the the y-values of all h1 tags
 function getPositions(array) {
@@ -61,8 +39,8 @@ function updateActive() {
 
 // Sets the names of links in #nav_affix
 function setNavAffixNames() {
-	var names = $("div.project h1 a");
-	var i = 0;
+	var names = $("div.project h1 a"),
+	i = 0;
 	$("#nav_affix li a").each( function() {
 		$(this).html(names[i].innerHTML);
 		i++;
@@ -82,3 +60,25 @@ function videoControl(e) {
 		video.pause();
 	}
 }
+
+// Event listeners
+$(window).on("load", function() {
+	getPositions(positions);
+	updateActive();
+	setNavAffixNames();
+	video = document.getElementsByTagName("video")[0];
+	setVideoVolume();
+});
+
+$(window).on("scroll", function() {
+	updateActive();
+});
+
+$(window).on("resize", function() {
+	getPositions(positions);
+	updateActive();
+});
+
+$(window).on("click", function() {
+	updateActive();
+});

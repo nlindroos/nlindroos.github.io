@@ -1,7 +1,8 @@
 window.addEventListener("load", function() {
 	
-	// Adds the current date to the lower left corner
-	// N.B. Has to be done once window has loaded so as not to overwrite the HTML content
+	/*	Adds the current date to the lower left corner
+		N.B. Has to be done once window has loaded so as 
+		not to overwrite the HTML content*/
 	var d = new Date();
 	var dayArray = [];
 	dayArray[0] = "Sunday";
@@ -34,7 +35,27 @@ window.addEventListener("load", function() {
 
 });
 
+/*	Tried reducing duplicate code by loading it with ajax. 
+	Seems to increases loading time, so abandoning that idea.
 
+function addNavbar() {
+	$.ajax({
+		type: "GET",
+		url: "navbar.html",
+		dataType: "html"
+	})
+	.done(function(navbarContent) {
+		try {
+			$(".navbar-inverse").append(navbarContent);
+		}
+		catch (err) {
+			console.log("Could not append the navbar, error: " + err);
+		}
+	})
+	.fail(function() {
+		console.log("Did not find the navbar.html file.");
+	});
+}*/
 
 //var result = httpGet("http://api.icndb.com/jokes/random");
 

@@ -3,21 +3,19 @@
 
 var loaded = 0;
 
-window.addEventListener("load", function() {
-	var bool = checkQuote();
-	// Execute if the quote content has been loaded from the URL (a.k.a. no 404)
-	if (!bool) {
-		addQuote();
-	}
-	addDate();
-});
+/*	Updating the position of the div.inset-shadow */
+function alignInsetShadow() {
+	var imgLeftValue = $(".img-circle").position().left;
+	$(".inset-shadow").css({left: imgLeftValue});
+}
 
 function addDate() {
+	/*	Comma separated variable declarations decreases
+		the number of look-ups required */
+	var d = new Date(),
+	day = d.getUTCDate(),
 
-	var d = new Date();
-	var day = d.getUTCDate();
-
-	var monthShort = [];
+	monthShort = [];
 	monthShort[0] = "Jan";
 	monthShort[1] = "Feb";
 	monthShort[2] = "Mar";
@@ -36,13 +34,14 @@ function addDate() {
 }
 
 function addQuote() {
-	// Picking out the cherries and removing the rubbish from 'quote of the day' pull
-	var quote = $("dt").html();
-	var author = $(".tqpAuthor").html();
-	var b = $("b")[0];
-	var dl = $("dl")[0];
-	var footer = $(".tqpFooter")[0];
-	var body = $("body")[0];
+	/*	Picking out the cherries and removing the 
+		rubbish from 'quote of the day' pull*/
+	var quote = $("dt").html(),
+	author = $(".tqpAuthor").html(),
+	b = $("b")[0],
+	dl = $("dl")[0],
+	footer = $(".tqpFooter")[0],
+	body = $("body")[0];
 	body.removeChild(b);
 	body.removeChild(dl);
 	body.removeChild(footer);
@@ -52,25 +51,42 @@ function addQuote() {
 	$("#author").html(author);
 }
 
-// @TODO: return false?
-function checkQuote() {
-	var text = "The quote could not be loaded. (404)";
-	if (loaded===0) {
-		$("#quote").html(text);
-		return true;
-	}
+function addError() {
+	text = "The quote could not be loaded. (404)";
+	$("#quote").html(text);
 }
 
 
+$(window).on("load", function() {
+	/*	Execute if the quote content has been loaded 
+		from the URL (a.k.a. no 404) */
+	var bool = loaded ? addQuote() : addError();
+	addDate();
+
+	//addQuotee();
+
+
+	var parent = $(".img-circle").parent();
+	$(".img-circle").parent().append('<div class="inset-shadow"></div>');
+
+	alignInsetShadow();
+});
+
+$(window).on("resize", function() {
+	alignInsetShadow();
+});
+
 /*
-// Fetching joke of the day with HTTP GET. N.B. "send" also necessary.
-function httpGet(theUrl)
-{
-    var xmlHttp = null;
-
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false );
-    xmlHttp.send("null");
-    return xmlHttp.responseText;
-}*/
-
+function addQuotee() {
+	$.ajax({
+		type: "GET",
+		url: "http://www.quotationspage.com/data/1qotd.js",
+		dataType: "script"
+	})
+	.done( function(response) {
+	})
+	.fail( function() {
+		alert("Failed");
+	});
+}
+*/
