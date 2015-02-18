@@ -48,18 +48,14 @@ function setNavAffixNames() {
 }
 
 function setVideoVolume() {
-	video.volume = 0.6;
+	try {
+		video.volume = 0.6;
+	}
+	catch (err) {
+		console.log("Video could not be found, error: " + err);
+	}
 }
 
-function videoControl(e) {
-	e.preventDefault();
-	if (video.paused) {
-		video.play();
-	}
-	else {
-		video.pause();
-	}
-}
 
 // Event listeners
 $(window).on("load", function() {
@@ -82,3 +78,19 @@ $(window).on("resize", function() {
 $(window).on("click", function() {
 	updateActive();
 });
+
+$("#nav_affix li a").click( function(e) {
+	e.preventDefault();
+	var id;
+	try {
+		id = $(this).prop("href").split("#")[1];
+	}
+	catch (err) {
+		console.log("List index out of range, error: "+err);
+	}
+	$('html, body').animate({
+		scrollTop: $("#"+id).offset().top
+	}, 1000);
+});
+
+

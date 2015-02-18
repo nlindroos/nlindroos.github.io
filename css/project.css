@@ -45,6 +45,25 @@ h1 a:active {
 	color: rgba(0, 0, 0, 0.4);
 }
 
+img.grayscale {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+	-webkit-transition: -webkit-filter 1.5s ease-in-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+	-moz-transition: -webkit-filter 1.5s ease-in-out, filter 1.5s ease-in-out; /* Firefox 16+ */
+	-o-transition: -webkit-filter 1.5s ease-in-out, filter 1.5s ease-in-out; /* Opera 12.1+ */
+	transition: -webkit-filter 1.5s ease-in-out, filter 1.5s ease-in-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+img.grayscale:hover {
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+	-webkit-filter: grayscale(0%); 	
+}
+
+img, p {
+	width: 90%;
+}
+
 kbd {
 	background-color: #BBB;
 	color: #000;
@@ -56,4 +75,12 @@ ul span {
 
 .project {
 	margin-bottom: 35px;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+@media (max-width: 1199px) {
+    img, p {
+        width: 100%;
+    }
 }
