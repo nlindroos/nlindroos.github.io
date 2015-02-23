@@ -61,7 +61,12 @@ img.grayscale:hover {
 }
 
 img, p {
-	width: 90%;
+	width: 80%;
+}
+
+video {
+	max-width: 80%;
+	max-height: 80%;
 }
 
 kbd {
@@ -82,5 +87,9 @@ ul span {
 @media (max-width: 1199px) {
     img, p {
         width: 100%;
+    }
+    video {
+    	max-height: 100%;
+    	max-width: 100%;
     }
 }
