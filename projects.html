@@ -1,156 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="author" content="Niklas Lindroos">
-		<meta name="description" content="Professional website about Niklas Lindroos, hobbyist web developer from Espoo, Finland.">
-		<meta name="keywords" content="Niklas Lindroos, Niklas, Lindroos, professional website, Espoo, Finland, Aalto, Aalto University">
-		<!--@TODO Change favicon-->
-		<link rel="icon" type="image/png" href="image/favicon32x32.png">
-		<title>Projects</title>
-		<!--Proper rendering and touch zooming-->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link rel="stylesheet" type="text/css" href="css/project.css">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Niklas Lindroos">
+	<meta name="description" content="Professional website about Niklas Lindroos, hobbyist web developer from Espoo, Finland.">
+	<meta name="keywords" content="Niklas Lindroos, Niklas, Lindroos, professional website, Espoo, Finland, Aalto, Aalto University">
+	<!--@TODO Change favicon-->
+	<link rel="icon" type="image/png" href="image/favicon32x32.png">
+	<title>Projects</title>
+	<!--Proper rendering and touch zooming-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/project.css">
 
-	</head>
-	<body>
-		<!--@TODO: SSI: #include file="navbar.html" or <!-#include virtual="/file.txt" -->
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navbar">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	            <span class="sr-only">Toggle navigation</span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button>
-	          <a class="navbar-brand" href="index.html"><span id="name">Niklas Lindroos</span><span id="title"> - Projects and schoolwork</span></a>
-	        </div>
-	        <div class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav navbar-right">
-	          	<li><a href="index.html">Home</a></li>
-	            <li class="active"><a href="projects.html">Programming Projects</a></li>
-	            <li><a href="pdf/CV_Lindroos.pdf">Curriculum Vitae</a></li>
-	            <li><a href="pdf/bachelor.pdf">Bachelor's thesis</a></li>
-	          </ul>
-	        </div>
-	      </div>
-	    </div>
-
-	    <div class="container-fluid main">
-	    	<div class="row-fluid">
-	    		<div class="col-md-9 descript_text">
-	    			<div class="project">
-	    				<h1 class="page-header" id="gamestore2015"><a href="http://gamestore2015.herokuapp.com" target="_blank">Gamestore 2015</a></h1>
-	    				<div>
-	    					<p>Gamestore 2015 is a platform that offers developers the opportunity to upload games and players the opportunity to view and play games. The games can communicate with the service by sending messages conforming to the Simple Message Protocol (more instructions in the developer view) with postMessage().</p>
-	    					<p>This service is built on top of the <a href="https://www.djangoproject.com/" target="_blank">Django Web framework</a>. Bootstrap is used along with jQuery.</p>
-	    					<a href="image/gamestore2015.png"><img src="image/gamestore2015.png" class="img-thumbnail grayscale" alt="Front page of Gamestore 2015"></a>
-	    					<br><br><p>Please check out this service hosted on Heroku by visiting <a href="http://gamestore2015.herokuapp.com" target="_blank">gamestore2015.herokuapp.com</a>. The source code is available on my <a href="https://github.com/nlindroos/Gamestore-2015" target="_blank">GitHub profile</a>.</p>
-	    					<p>This game is designed and programmed by Niklas Lindroos, Martin Granholm and Johan Gädda as part of the Aalto University course <a href="https://noppa.aalto.fi/noppa/kurssi/cse-c3210/etusivu" target="_blank">Web Software Development</a>.</p>
-	    				</div>
-	    			</div>
-	    			<div class="project">
-	    				<h1 class="page-header" id="website"><a href="index.html">This website</a></h1>
-	    				<div>
-	    					<p>This website is built on top of the <a href="http://getbootstrap.com/" hreflang="en" type="text/html" target="_blank">Twitter Bootstrap</a> front-end framework and is viewable on all major browsers (IE >9) on a desktop PC as well as on any mobile device. Bootstrap is a mobile first, responsive front-end framework.</p>
-	    					<p>The dynamic functionality is implemented mainly with jQuery.</p>
-	    					<p>This website is hosted on <a href="https://github.com/nlindroos/nlindroos.github.io" target="_blank">Github</a>, where the source code can also be accessed.</p>
-	    				</div>
-	    			</div>
-	    			<div class="project">
-	    				<h1 class="page-header" id="akvaario"><a href="https://github.com/futurice/aquarium" target="_blank">Aquarium - Customer project window</a></h1>
-	    				<div>
-	    					<p>Aquarium is a project window that can be used by both companies and their clients to view current information about a project. It is designed to be used as a supplementary communication tool and project state check-up site. The source code is released as open source under the MIT License and can be found at <a href="https://github.com/futurice/aquarium" target="_blank">https://github.com/futurice/aquarium</a>. An adaption of Scrum (agile software development framework) was used in the team, which consisted of 9 persons. The application is built upon the <a href="https://www.playframework.com/" target="_blank">Play Framework</a>, uses <a href="http://www.mongodb.org/" target="_blank">MongoDB</a> and Scala for the back-end and the <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> frameworks for the front-end.</p><p>This project was initiated by <a href="http://futurice.com/" target="_blank">Futurice</a>, a Finnish software development company, as part of the Aalto University course <a href="https://noppa.aalto.fi/noppa/kurssi/t-76.4115/etusivu" target="_blank">T-76.4115 Software Development Project I</a>.</p><p></p>
-	    				</div>
-	    			</div>
-		    			<div class="project">
-		    				<h1 class="page-header" id="gibson"><a href="gibson_hero/main.html" target="_blank">Gibson Hero</a></h1>
-		    				<div>
-		    					<p>Gibson Hero is a Guitar Hero-type game where the goal is to Gibson Hero is implemented using the HTML5 <i>canvas</i> element. CSS graphics are used in combination with JavaScript and the jQuery JavaScript library. The game Gibson Hero can be accessed <a href="gibson_hero/main.html" target="_blank">here</a> (or by clicking the title). Please note that the game is only designed to work with a fairly recent version of Google Chrome (v31.0.1650.63 m or higher) on a desktop PC.<br><br>This game is designed and programmed by Niklas Lindroos and Teemu Karppinen.<br><br>Gameplay footage of Guitar Hero:</p>
-		    				</div>
-		    				<div class="embed-responsive-16by9">
-			    				<video controls class="embed-responsive-item" preload="metadata">
-			    					<source src="video/gibson_gameplay.mp4" type="video/mp4">
-			    					Your browser does not have support for the <i>video</i> tag.
-			    				</video>
-			    			</div>
-		    			</div>
-	    			<div class="project">
-	    				<h1 class="page-header" id="maze"><a href="pdf/labyrinth.pdf">Maze game</a></h1>
-	    				<div>
-	    					<p>This game includes a random maze generator and the goal is to navigate through the generated maze to the exit.<br><br>An example of what the game looks like: <br><br></p>
-	    					<div><a href="image/maze.jpg"><img src="image/maze.jpg" class="img-thumbnail grayscale" alt="Example of the maze game"></a></div>
-	    					<p>A description of the project, including the source code can be found <a href="pdf/labyrinth.pdf">here</a> (in Finnish). The source code can be downloaded through <a href="zip/labyrinth.zip">this link</a> (zip). The game is run by <kbd>cd</kbd>-ing into the correct folder and running <i>mainwindow.py</i> by typing <kbd>python mainwindow.py</kbd> into a command-line interpreter. This naturally requires that Python is installed (v2.x).</p>
-	    				</div>
-	    			</div>
-	    			<div class="project">
-	    				<h1 class="page-header" id="president"><a href="#" target="_blank">President Evil</a></h1>
-	    				<div>
-	    					<p>President Evil is a text-based game designed and programmed by Niklas Lindroos and Johan Gädda during the presidential election in Finland in 2012.</p><p>The source code for this game can be <a href="zip/president_evil.zip">downloaded here</a> (zip).</p><p>This game is run by extracting the zip package, <kbd>cd</kbd>-ing into the correct folder and running <i>adventure_text_UI.py</i> by typing <kbd>python adbenture_text_UI.py</kbd> into a command-line interpreter.</p>
-	    					<p>Here is an example of what playing the game looks like: </p>
-	    					<div><a href="image/president_evil.png"><img src="image/president_evil.png" alt="President evil example" class="img-thumbnail grayscale"></a></div>
-	    				</div>
-	    			</div>
-	    		</div>	
-	    	</div>
-
-	    	<!-- @TODO: Add animation for movement? -->
-	    	<div class="row-fluid">
-			    <div class="col-md-3">
-					<div class="hidden-xs hidden-sm hidden-print">
-						<ul class="nav navbar" id="nav_affix">
-							<li><a href="#gamestore2015" id="li1"></a></li>
-							<li><a href="#website" id="li2"></a></li>
-							<li><a href="#akvaario" id="li3"></a></li>
-							<li><a href="#gibson" id="li4"></a></li>
-							<li><a href="#maze" id="li5"></a></li>
-							<li><a href="#president" id="li6"></a></li>
-						</ul>				
-					</div>
-				</div>
+</head>
+<body>
+	<!--@TODO: SSI: #include file="navbar.html" or <!-#include virtual="/file.txt" -->
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><span id="name">Niklas Lindroos</span><span id="title"> - Projects and schoolwork</span></a>
 			</div>
-	    </div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="projects.html">Programming Projects</a></li>
+					<li><a href="pdf/CV_Lindroos.pdf">Curriculum Vitae</a></li>
+					<li><a href="pdf/bachelor.pdf">Bachelor's thesis</a></li>
+					<li><a href="biogrid/app/index.html">Biogrid</a></li>
+				</ul>
+			</div>
+		</div>
+    </div>
 
-		<div class="footer">
-			<div class="container-fluid">
-				<div>
-					<div>
-						<span id="date"></span>
-					</div>
-					<div class="row text-center">
-						<div class="col-sm-offset-1 col-md-offset-2 col-sm-3 col-md-2">
-							<span class="glyphicon glyphicon-earphone"></span>
-							(+358)40-6822900
-						</div>
-						<div class=" col-sm-4 col-md-3">
-							<span class="glyphicon glyphicon-home"></span>
-							<a href="http://nlindroos.github.io">nlindroos.github.io</a>
-						</div>
-						<div class=" col-sm-4 col-md-3">
-							<span class="glyphicon glyphicon-envelope"></span>
-							<a href="mailto:niklas.a.lindroos@aalto.fi">niklas.a.lindroos@aalto.fi</a>
-						</div>				
-					</div>
-					<div id="copyright">&copy; Copyright 2014 Niklas Lindroos</div>
+    <div class="container-fluid main">
+    	<div class="row-fluid">
+    		<div class="col-md-9 descript_text">
+    			<div class="project">
+    				<h1 class="page-header" id="gamestore2015"><a href="http://gamestore2015.herokuapp.com" target="_blank">Gamestore 2015</a></h1>
+    				<div>
+    					<p>Gamestore 2015 is a platform that offers developers the opportunity to upload games and players the opportunity to view and play games. The games can communicate with the service by sending messages conforming to the Simple Message Protocol (more instructions in the developer view) with postMessage().</p>
+    					<p>This service is built on top of the <a href="https://www.djangoproject.com/" target="_blank">Django Web framework</a>. Bootstrap is used along with jQuery.</p>
+    					<a href="image/gamestore2015.png"><img src="image/gamestore2015.png" class="img-thumbnail grayscale" alt="Front page of Gamestore 2015"></a>
+    					<br><br><p>Please check out this service hosted on Heroku by visiting <a href="http://gamestore2015.herokuapp.com" target="_blank">gamestore2015.herokuapp.com</a>. The source code is available on my <a href="https://github.com/nlindroos/Gamestore-2015" target="_blank">GitHub profile</a>.</p>
+    					<p>This game is designed and programmed by Niklas Lindroos, Martin Granholm and Johan Gädda as part of the Aalto University course <a href="https://noppa.aalto.fi/noppa/kurssi/cse-c3210/etusivu" target="_blank">Web Software Development</a>.</p>
+    				</div>
+    			</div>
+    			<div class="project">
+    				<h1 class="page-header" id="website"><a href="index.html">This website</a></h1>
+    				<div>
+    					<p>This website is built on top of the <a href="http://getbootstrap.com/" hreflang="en" type="text/html" target="_blank">Twitter Bootstrap</a> front-end framework and is viewable on all major browsers (IE >9) on a desktop PC as well as on any mobile device. Bootstrap is a mobile first, responsive front-end framework.</p>
+    					<p>The dynamic functionality is implemented mainly with jQuery.</p>
+                        <p>This website is hosted on <a href="https://github.com/nlindroos/nlindroos.github.io" target="_blank">Github</a>, where the source code can also be accessed.</p>
+    				</div>
+    			</div>
+    			<div class="project">
+    				<h1 class="page-header" id="akvaario"><a href="https://github.com/futurice/aquarium" target="_blank">Aquarium - Customer project window</a></h1>
+    				<div>
+    					<p>Aquarium is a project window that can be used by both companies and their clients to view current information about a project. It is designed to be used as a supplementary communication tool and project state check-up site. The source code is released as open source under the MIT License and can be found at <a href="https://github.com/futurice/aquarium" target="_blank">https://github.com/futurice/aquarium</a>. An adaption of Scrum (agile software development framework) was used in the team, which consisted of 9 persons. The application is built upon the <a href="https://www.playframework.com/" target="_blank">Play Framework</a>, uses <a href="http://www.mongodb.org/" target="_blank">MongoDB</a> and Scala for the back-end and the <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> frameworks for the front-end.</p><p>This project was initiated by <a href="http://futurice.com/" target="_blank">Futurice</a>, a Finnish software development company, as part of the Aalto University course <a href="https://noppa.aalto.fi/noppa/kurssi/t-76.4115/etusivu" target="_blank">T-76.4115 Software Development Project I</a>.</p><p></p>
+    				</div>
+    			</div>
+    			<div class="project">
+    				<h1 class="page-header" id="gibson"><a href="gibson_hero/main.html" target="_blank">Gibson Hero</a></h1>
+    				<div>
+    					<p>Gibson Hero is a Guitar Hero-type game where the goal is to Gibson Hero is implemented using the HTML5 <i>canvas</i> element. CSS graphics are used in combination with JavaScript and the jQuery JavaScript library. The game Gibson Hero can be accessed <a href="gibson_hero/main.html" target="_blank">here</a> (or by clicking the title). Please note that the game is only designed to work with a fairly recent version of Google Chrome (v31.0.1650.63 m or higher) on a desktop PC.<br><br>This game is designed and programmed by Niklas Lindroos and Teemu Karppinen.<br><br>Gameplay footage of Guitar Hero:</p>
+    				</div>
+    				<div class="embed-responsive-16by9">
+	    				<video controls class="embed-responsive-item" preload="metadata">
+	    					<source src="video/gibson_gameplay.mp4" type="video/mp4">
+	    					Your browser does not have support for the <i>video</i> tag.
+	    				</video>
+	    			</div>
+    			</div>
+    			<div class="project">
+    				<h1 class="page-header" id="maze"><a href="pdf/labyrinth.pdf">Maze game</a></h1>
+    				<div>
+    					<p>This game includes a random maze generator and the goal is to navigate through the generated maze to the exit.<br><br>An example of what the game looks like: <br><br></p>
+    					<div><a href="image/maze.jpg"><img src="image/maze.jpg" class="img-thumbnail grayscale" alt="Example of the maze game"></a></div>
+    					<p>A description of the project, including the source code can be found <a href="pdf/labyrinth.pdf">here</a> (in Finnish). The source code can be downloaded through <a href="zip/labyrinth.zip">this link</a> (zip). The game is run by <kbd>cd</kbd>-ing into the correct folder and running <i>mainwindow.py</i> by typing <kbd>python mainwindow.py</kbd> into a command-line interpreter. This naturally requires that Python is installed (v2.x).</p>
+    				</div>
+    			</div>
+    			<div class="project">
+    				<h1 class="page-header" id="president"><a href="#" target="_blank">President Evil</a></h1>
+    				<div>
+    					<p>President Evil is a text-based game designed and programmed by Niklas Lindroos and Johan Gädda during the presidential election in Finland in 2012.</p><p>The source code for this game can be <a href="zip/president_evil.zip">downloaded here</a> (zip).</p><p>This game is run by extracting the zip package, <kbd>cd</kbd>-ing into the correct folder and running <i>adventure_text_UI.py</i> by typing <kbd>python adbenture_text_UI.py</kbd> into a command-line interpreter.</p>
+    					<p>Here is an example of what playing the game looks like: </p>
+    					<div><a href="image/president_evil.png"><img src="image/president_evil.png" alt="President evil example" class="img-thumbnail grayscale"></a></div>
+    				</div>
+    			</div>
+    		</div>	
+    	</div>
+
+    	<!-- @TODO: Add animation for movement? -->
+    	<div class="row-fluid">
+		    <div class="col-md-3">
+				<div class="hidden-xs hidden-sm hidden-print">
+					<ul class="nav navbar" id="nav_affix">
+						<li><a href="#gamestore2015" id="li1"></a></li>
+						<li><a href="#website" id="li2"></a></li>
+						<li><a href="#akvaario" id="li3"></a></li>
+						<li><a href="#gibson" id="li4"></a></li>
+						<li><a href="#maze" id="li5"></a></li>
+						<li><a href="#president" id="li6"></a></li>
+					</ul>				
 				</div>
 			</div>
 		</div>
+    </div>
 
-		<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="js/project.js"></script>
+	<div class="footer">
+		<div class="container-fluid">
+			<div>
+				<div>
+					<span id="date"></span>
+				</div>
+				<div class="row text-center">
+					<div class="col-sm-offset-1 col-md-offset-2 col-sm-3 col-md-2">
+						<span class="glyphicon glyphicon-earphone"></span>
+						(+358)40-6822900
+					</div>
+					<div class=" col-sm-4 col-md-3">
+						<span class="glyphicon glyphicon-home"></span>
+						<a href="http://nlindroos.github.io">nlindroos.github.io</a>
+					</div>
+					<div class=" col-sm-4 col-md-3">
+						<span class="glyphicon glyphicon-envelope"></span>
+						<a href="mailto:niklas.a.lindroos@aalto.fi">niklas.a.lindroos@aalto.fi</a>
+					</div>				
+				</div>
+				<div id="copyright">&copy; Copyright 2014 Niklas Lindroos</div>
+			</div>
+		</div>
+	</div>
 
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
-	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	    <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	    <![endif]-->
-	</body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/project.js"></script>
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</body>
 </html>
