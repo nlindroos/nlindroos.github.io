@@ -1,7 +1,7 @@
 'use strict';
 
-describe('myApp.version module', function() {
-  beforeEach(module('myApp.version'));
+describe('bioGrid.version module', function() {
+  beforeEach(module('bioGrid.version'));
 
   describe('version service', function() {
     it('should return current version', inject(function(version) {

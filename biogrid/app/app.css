@@ -1,6 +1,131 @@
-/* app css stylesheet */
 
-.menu {
+
+/*a img {
+    position: absolute;
+    -webkit-clip-path: polygon(0 0,0 51px,72px 51px,72px 0px);
+    -ms-clip-path: polygon(0 0,0 51px,72px 51px,72px 0px);
+    clip-path: polygon(0 0,0 51px,72px 51px,72px 0px);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+a img:hover {
+    -webkit-clip-path: polygon(0 51px,0 102px,72px 102px,72px 51px);
+    -ms-clip-path: polygon(0 51px,0 102px,72px 102px,72px 51px);
+    clip-path: polygon(0 51px,0 102px,72px 102px,72px 51px);
+    top: -51px;
+}*/
+
+/*@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}*/
+
+body {
+    background: #182a36 none repeat scroll 0 0;
+    background: url("images/background.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+body.filter {
+    background: url("images/background-layer.png") no-repeat center center fixed;
+    transition: background ease-in-out 2s ;
+    /*background-color: rgba(24, 42, 54, 0.5);*/
+    /*rgba(24, 42, 54, 0.8) */
+    /*background: #182a36 none repeat scroll 0 0;*/
+}
+
+.container.text-center {
+    height: 85vh;
+}
+
+.img-container {
+    position: absolute;
+    left: 0;
+    width: 72px;
+    height: 51px;
+    overflow: hidden;
+}
+
+.img-container a {
+    margin-top: -51px;
+    transition: all 1s;
+}
+
+.img-container a:hover {
+    margin-top: 0px;
+}
+
+
+nav.navbar {
+    background-color: #132935;
+    border-bottom: 1px solid #465a6a;
+    bottom: auto;
+    box-sizing: border-box;
+    height: 3.25em;
+    left: auto;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+nav.navbar li a {
+    color: #eae3c9;
+    transition: color 0.5s;
+}
+
+nav.navbar li a:hover,
+nav.navbar li a:focus {
+    background-color: inherit;
+    color: #c6b678;
+}
+
+div.row {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    max-height: 85vh;
+    overflow: hidden;
+}
+
+div.col-md-6:nth-child(2) {
+    top: 1000px;
+    transition: top 3s;
+    top: 0px;
+}
+
+h1 {
+    font-weight: 700;
+    color: #eae3c9;
+}
+
+h3 {
+    font-weight: 500;
+    color: #E7E152;
+}
+
+p {
+    color: #e3e3bc;
+}
+
+
+
+
+
+/* Whatevs */
+
+/*.menu {
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
@@ -28,3 +153,4 @@
   content: "";
   padding: 0;
 }
+*/
