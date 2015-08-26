@@ -13,6 +13,12 @@ An Angular application displaying photos and short biographies of selected peopl
 * [lodash](https://lodash.com/)
 
 
+### Bugs and unfinished features
+
+There is a glitch in the background image when jumping from the first page to the second vice versa that was not fixed due to the time restraint. The image lining should be adjusted to be suitable for both large and small images. The app is in its current form assuming that images are either 282x282 (px) or 585x282 (px). There is a small gap difference based on large/small image order, this could have been finetuned with CSS had there been more time.
+
+Due to the time limitation, touch controls were not implemented. Touch navigation could have easily achieved with ngTouch and $swipe. 
+
 
 ### Technical choices
 
@@ -21,8 +27,6 @@ Although I have used Angular for a couple of months in my current job, I wanted 
 To run with Angular was probably not the wisest of choices considering the time limit, as unfamiliarity with starting and setting up the project was time consuming. angular-seed naturally shortened the initial set-up time.
 
 Images are dynamically loaded from the [example project](http://transitions1020.com/#lumia/crew_bios), texts were copied from the same source.
-
-There is a glitch in the background image when jumping from the first page to the second vice versa that was not fixed due to the time restraint. The image lining should be adjusted to be suitable for both large and small images. The app is in its current form assuming that images are either 282x282 (px) or 585x282 (px). There is a small gap difference based on large/small image order, this could have been finetuned with CSS had there been more time.
 
 The original idea for image animation was letting the images "drop in" one by one, not requiring scrolling from the user (or in this case pressing the arrow keys). A matte filter (as can be seen on several of the photographs) would have been added to the images and on mouse :focus, the image would have been enriched with the original colors. These features also remain unimplemented due to the restricted time.
 
