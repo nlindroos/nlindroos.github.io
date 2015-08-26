@@ -1,21 +1,10 @@
 <div class="row">
     <div class="col-md-6">
-        <p>This is the partial for view 2.</p>
-        <p>
-          Showing of 'interpolate' filter:
-          {{ 'Current version is v%VERSION%.' | interpolate }}
-        </p>
+        <img data-ng-repeat="image in persons[count-1].images" data-ng-src="{{image.src}}" data-ng-class="{'img-small': image.width=='282', 'img-large': image.width=='585'}" alt="{{image.alt}}">
     </div>
-    <div class="col-md-6" data-ng-class="{'animation': loading}">
-        <h1>DESCRIPTION</h1><h1>{{count}}</h1><h1>Loading : {{loading}}</h1>
-        <h3>Occupation</h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ligula nunc, placerat eu ultrices in, imperdiet non odio. Nunc vitae mi ligula. Nunc id scelerisque dui, non luctus libero. Proin non facilisis diam. Fusce at elementum arcu. Donec efficitur arcu et elit viverra mollis. Nulla odio diam, vehicula in tempus id, volutpat ac ante. Vestibulum ullamcorper ultricies porttitor. In pulvinar, sapien a vestibulum suscipit, sem lorem maximus odio, ac egestas erat dolor vitae urna. Aliquam volutpat accumsan tellus a ultricies. In hac habitasse platea dictumst. Suspendisse et laoreet lectus.
-
-        Maecenas vitae libero et ipsum semper ultrices. Duis sollicitudin purus erat, sit amet aliquam mi efficitur nec. Praesent tincidunt dapibus sem. Curabitur vestibulum nibh vel dolor efficitur, aliquet pretium eros commodo. Nullam luctus tempor nunc, sit amet feugiat augue ornare vitae. Aliquam id leo mattis mi luctus mattis. Proin rutrum mauris nisi, vitae luctus orci ultrices nec.
-
-        Etiam ultricies est massa, vel sagittis nulla molestie ut. Sed porta viverra sodales. Fusce ut lobortis risus. Mauris posuere quam eu ante ullamcorper, ac laoreet ante pellentesque. In hac habitasse platea dictumst. Nullam laoreet ex sed nisl pellentesque, sit amet pretium justo dictum. Fusce quis purus vitae leo finibus volutpat vitae eu tortor. Quisque a sem erat. Vivamus vestibulum dolor orci, pharetra dapibus nisl varius facilisis.
-
-        Curabitur nec vulputate nulla, sed aliquet ex. Ut non felis est. Curabitur vitae massa non eros imperdiet scelerisque. Sed cursus orci leo, at bibendum tortor varius nec. Maecenas imperdiet erat at eros cursus rhoncus. Pellentesque ultrices sodales metus, nec venenatis lectus porta nec. Sed rutrum varius pulvinar. Suspendisse consequat posuere mauris nec porttitor. Donec tincidunt quam at turpis cursus condimentum. Etiam velit ipsum, dignissim quis ultrices vitae, congue vehicula est. 
-        </p> 
+    <div class="col-md-6" data-ng-class="{'animation': !loading}">
+        <h1>{{persons[count-1].name}}</h1>
+        <h3>{{persons[count-1].occupation}}</h3>
+        <p data-ng-repeat="description in persons[count-1].descriptions">{{description.text}}</p> 
     </div>
 </div>

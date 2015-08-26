@@ -9,17 +9,17 @@ angular.module('bioGrid.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', ['$document', '$location', '$rootScope', '$scope', '$timeout', '$window', function($document, $location, $rootScope, $scope, $timeout, $window) {
+.controller('View2Ctrl', ['$document', '$http', '$location', '$rootScope', '$scope', '$timeout', '$window', function($document, $http, $location, $rootScope, $scope, $timeout, $window) {
 
     var body = angular.element($document[0].body),
         window = angular.element($window),
-        maxCount = 5;
+        maxCount = 2;
 
     $scope.count = 1;
     $rootScope.loading = true;
     $timeout(function() {
         $rootScope.loading = false;
-    }, 2000);
+    }, 200);
 
     body.addClass('filter');
 
@@ -31,13 +31,15 @@ angular.module('bioGrid.view2', ['ngRoute'])
         }
         var key = e.which ? e.which : false;
         console.log(key);
+        // 'up'
         if (key===38) {
+            // Coming from mainView
             if ($scope.count === 1) {
                 $scope.$apply(function() {
                     $rootScope.loading = true;
                     $timeout(function() {
                         $rootScope.loading = false;
-                    }, 2000);
+                    }, 500);
                     $location.path('mainView');
                 });
             }
@@ -47,10 +49,11 @@ angular.module('bioGrid.view2', ['ngRoute'])
                     $rootScope.loading = true;
                     $timeout(function() {
                         $rootScope.loading = false;
-                    }, 2000);
+                    }, 200);
                 });
             }
         }
+        // 'down'
         else if (key===40) {
             if ($scope.count !== maxCount) {
                 $scope.$apply(function() {
@@ -58,10 +61,20 @@ angular.module('bioGrid.view2', ['ngRoute'])
                     $rootScope.loading = true;
                     $timeout(function() {
                         $rootScope.loading = false;
-                    }, 2000);
+                    }, 200);
                 });
             }
         }
+    });
+
+
+    $http.get("data/bios.json").success(function (data) {
+        $scope.persons = data;
+        // _.each(data, function (person) {
+        //     if (person.id == $scope.count) {
+        //         $scope.person = person;
+        //     }
+        // });
     });
 
 }]);

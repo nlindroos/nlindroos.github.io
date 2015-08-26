@@ -32,20 +32,9 @@ config(['$routeProvider', function($routeProvider) {
                 }
             });
 
-            angular.element($window).bind('click', function() {
-                console.log('Reached this point!!!!!!');
-            });
         }
     };
 
     return directiveDefinitionObject;
 });
 
-// .controller('BioGridController', ['$scope', '$rootScope', function($scope, $rootScope) {
-//     $scope.scoll = scroll;
-
-//     function scroll($event) {
-//         console.log('$event', $event);
-
-//     }
-// }]);
