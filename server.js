@@ -1,0 +1,45 @@
+'use strict';
+
+const webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const path = require('path');
+
+const config = require('./webpack.config');
+
+const IP = '0.0.0.0';
+const PORT = process.env.PORT;
+
+config.entry.vendor = config.entry.vendor.concat([
+    `webpack-dev-server/client?http://${IP}:${PORT}`,
+    'webpack/hot/only-dev-server'
+]);
+
+config.plugins.push(new webpack.HotModuleReplacementPlugin());
+
+config.module.loaders.unshift({
+    test: /\.jsx?$/,
+    loader: 'react-hot',
+    exclude: /(node_modules|bower_components)/
+});
+
+new WebpackDevServer(webpack(config), {
+    contentBase: 'public',
+    publicPath: config.output.publicPath,
+    hot: true,
+    historyApiFallback: true,
+    proxy: {
+        [process.env.MOCK_API]: {
+            secure: false,
+            bypass: (req, res) => {
+                req.method = 'GET';
+                return `${req.path}.json`;
+            }
+        }
+    }
+}).listen(PORT, IP, (err, result) => {
+    if (err) {
+        console.error(err);
+        process.exit(1);
+    }
+    console.log(`Listening at ${IP}:${PORT}`);
+});
