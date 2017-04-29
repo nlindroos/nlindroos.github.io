@@ -1,7 +1,3 @@
 
-
-# Personal professional website
-
-## Own website
-Displaying projects
-
+## Tech
+[react-slingshot](https://github.com/coryhouse/react-slingshot) used to bootstrap the app.
