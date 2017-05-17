@@ -29,6 +29,8 @@
   "author": "Niklas Lindroos",
   "license": "MIT",
   "dependencies": {
+    "flexboxgrid": "6.3.1",
+    "normalize.css": "6.0.0",
     "object-assign": "4.1.0",
     "react": "15.4.1",
     "react-dom": "15.4.1",

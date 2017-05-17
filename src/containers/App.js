@@ -17,6 +17,19 @@ class App extends React.Component {
                 {' | '}
                 <Link to="/about">About</Link>
                 <br/>
+
+                <div className="row">
+                    <div className="col-xs-8">
+                        <div className="box">
+                            <span>hurl</span>
+                        </div>
+                    </div>
+                    <div className="col-xs-4">
+                        <div className="box">
+                            <span>hurl2</span>
+                        </div>
+                    </div>
+                </div>
                 {this.props.children}
             </div>
         );

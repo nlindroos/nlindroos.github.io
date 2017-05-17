@@ -3,7 +3,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import AboutPage from './AboutPage';
+import AboutPage from '../containers/AboutPage';
 
 describe('<AboutPage />', () => {
     it('should have a header called \'About\'', () => {
