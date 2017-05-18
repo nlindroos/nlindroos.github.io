@@ -2,16 +2,43 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import { connect } from 'react-redux';
 import { Link, IndexLink } from 'react-router';
+import { action as toggleMenu } from 'redux-burger-menu';
+
+import styles from '../styles/burger-menu.css';
+
+import BurgerMenu from '../components/BurgerMenu';
 
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
 // component at the top-level.
 class App extends React.Component {
+    static propTypes = {
+        dispatch: PropTypes.func.isRequired,
+        children: PropTypes.element
+    };
+
+    constructor(props) {
+        super(props);
+    }
+
+    closeMenu = () => {
+        this.props.dispatch(toggleMenu(false));
+    }
+
     render() {
         return (
             <div>
-                <IndexLink to="/">Home</IndexLink>
+                <BurgerMenu right>
+                    <IndexLink className={styles.link} to="/" onClick={this.closeMenu}>Home</IndexLink>
+                    <Link to="/about" onClick={this.closeMenu}>About</Link>
+                    {/*<a id="home" className="menu-item" href="/">Home</a>
+                    <a id="about" className="menu-item" href="/about">About</a>*/}
+                </BurgerMenu>
+                <div className="content">
+                {/*<IndexLink to="/">Home</IndexLink>
                 {' | '}
                 <Link to="/fuel-savings">Demo App</Link>
                 {' | '}
@@ -29,15 +56,18 @@ class App extends React.Component {
                             <span>hurl2</span>
                         </div>
                     </div>
-                </div>
+                </div>*/}
                 {this.props.children}
+                </div>
             </div>
         );
     }
 }
 
-App.propTypes = {
-    children: PropTypes.element
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatch
+    };
 };
 
-export default App;
+export default connect(() => ({}), mapDispatchToProps)(App);
