@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import { Link, IndexLink } from 'react-router';
-import { action as toggleMenu } from 'redux-burger-menu';
+import { action as toggleMenu } from 'redux-burger-menu/immutable';
 
 import styles from '../styles/burger-menu.css';
 
@@ -32,8 +32,9 @@ class App extends React.Component {
         return (
             <div>
                 <BurgerMenu right>
-                    <IndexLink className={styles.link} to="/" onClick={this.closeMenu}>Home</IndexLink>
-                    <Link to="/about" onClick={this.closeMenu}>About</Link>
+                    <IndexLink to="/" onClick={this.closeMenu} className={styles.link}>Home</IndexLink>
+                    <Link to="/about" onClick={this.closeMenu} className={styles.link}>About</Link>
+                    <a id="home" className="menu-item" href="/">Old homepage</a>
                     {/*<a id="home" className="menu-item" href="/">Home</a>
                     <a id="about" className="menu-item" href="/about">About</a>*/}
                 </BurgerMenu>

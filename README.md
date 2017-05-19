@@ -7,4 +7,6 @@ Tech | Explanation
 [Flexbox Grid](http://flexboxgrid.com/) | Provides the grid system for the layout of the page.
 [Babel](https://babeljs.io/) | Enables usage of advanced EcmaScript features.
 [Webpack](https://webpack.js.org/) | Module/asset/resource bundler.
+[Immutable.js](https://facebook.github.io/immutable-js/) | Immutability for increased performance.
+[mudash](https://github.com/brianneisler/mudash) | Lodash wrapper for immutable.js.
 + in addition to a number of third-party libraries.

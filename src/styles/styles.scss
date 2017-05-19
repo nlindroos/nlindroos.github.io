@@ -12,6 +12,7 @@
 body {
     font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     // line-height: 1.4em;
+    min-width: 230px;
     color: #4d4d4d;
     background: $white;
     -webkit-font-smoothing: antialiased;
@@ -23,7 +24,6 @@ body {
 
 // css-loader's module loading requires global classes to be prefixed by :global
 :global .content {
-    min-width: 230px;
     max-width: 1080px;
     margin: 0 auto;
     padding: 10px;
