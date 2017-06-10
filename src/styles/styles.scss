@@ -20,6 +20,7 @@ body {
     font-smoothing: antialiased;
     font-weight: 300;
     margin: 0;
+    height: 100%;
 }
 
 // css-loader's module loading requires global classes to be prefixed by :global
@@ -27,4 +28,13 @@ body {
     max-width: 1080px;
     margin: 0 auto;
     padding: 10px;
+}
+
+html, body {
+    height: 100%;
+}
+
+@font-face {
+    font-family: allura;
+    src: url("../assets/fonts/allura/Allura-Regular.otf");
 }

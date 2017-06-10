@@ -10,6 +10,7 @@ import { action as toggleMenu } from 'redux-burger-menu/immutable';
 import styles from '../styles/burger-menu.css';
 
 import BurgerMenu from '../components/BurgerMenu';
+import scrollToComponent from 'react-scroll-to-component';
 
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -28,17 +29,25 @@ class App extends React.Component {
         this.props.dispatch(toggleMenu(false));
     }
 
+    scrollToTop = () => {
+        scrollToComponent(this._BurgerMenu, {
+            ease: 'inCirc',
+            align: 'bottom'
+        });
+    }
+
     render() {
         return (
             <div>
-                <BurgerMenu right>
-                    <IndexLink to="/" onClick={this.closeMenu} className={styles.link}>Home</IndexLink>
+                <BurgerMenu ref={(_) => this._BurgerMenu = _} className="burger-menu-wrapper" pageWrapId="page-wrap" outerContainerId="body" right>
+                    <IndexLink to="/" onClick={() => {this.closeMenu(); this.scrollToTop();}} className={styles.ownName}>Niklas Lindroos</IndexLink>
+                    <hr />
                     <Link to="/about" onClick={this.closeMenu} className={styles.link}>About</Link>
-                    <a id="home" className="menu-item" href="/">Old homepage</a>
+                    {/*<a id="home" className={styles.link} href="/old">Old homepage</a>*/}
                     {/*<a id="home" className="menu-item" href="/">Home</a>
                     <a id="about" className="menu-item" href="/about">About</a>*/}
                 </BurgerMenu>
-                <div className="content">
+                <div id="page-wrap" className="content">
                 {/*<IndexLink to="/">Home</IndexLink>
                 {' | '}
                 <Link to="/fuel-savings">Demo App</Link>
