@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { hot } from 'react-hot-loader';
 
-import AboutPage from './components/AboutPage';
-import HomePage from './components/HomePage';
-import NotFoundPage from './components/NotFoundPage';
+import AboutPage from './views/AboutPage';
+import HomePage from './views/HomePage';
+import NotFoundPage from './views/NotFoundPage';
 import BurgerMenu from './components/BurgerMenu';
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
