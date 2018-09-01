@@ -3,10 +3,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { scaleRotate as Menu } from 'react-burger-menu';
-import { decorator as reduxBurgerMenu } from 'redux-burger-menu';
 import { connect } from 'react-redux';
-import { action as toggleMenu } from 'redux-burger-menu';
-import { NavLink, Route, Switch } from 'react-router-dom';
+import { decorator as reduxBurgerMenu, action as toggleMenu } from 'redux-burger-menu';
+import { NavLink } from 'react-router-dom';
 
 // export default reduxBurgerMenu(Menu);
 const BoundMenu = reduxBurgerMenu(Menu);
