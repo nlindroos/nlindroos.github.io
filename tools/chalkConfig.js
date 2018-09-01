@@ -1,5 +1,3 @@
-'use strict';
-
 // Centralized configuration for chalk, which is used to add color to console.log statements.
 import chalk from 'chalk';
 export const chalkError = chalk.red;

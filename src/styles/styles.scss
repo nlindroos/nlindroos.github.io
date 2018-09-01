@@ -1,11 +1,11 @@
 
-@import "~normalize.css";
-@import "~flexboxgrid";
+// @import "~normalize.css";
+// @import "~flexboxgrid";
 
 // Import global styling here. The majority of styling is consumed locally in a
 // component by using css-loader's module loading.
 // @import "burger-menu.scss";
-@import "variables.scss";
+// @import "variables.scss";
 
 
 /* Styles */
@@ -14,7 +14,7 @@ body {
     // line-height: 1.4em;
     min-width: 230px;
     color: #4d4d4d;
-    background: $white;
+    // background: $white;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     font-smoothing: antialiased;
