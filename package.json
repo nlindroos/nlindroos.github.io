@@ -30,10 +30,12 @@
   "author": "Niklas Lindroos",
   "license": "MIT",
   "dependencies": {
+    "emotion": "9.2.10",
     "object-assign": "4.1.1",
     "react": "16.4.2",
     "react-burger-menu": "2.5.2",
     "react-dom": "16.4.2",
+    "react-emotion": "9.2.10",
     "react-redux": "5.0.7",
     "react-router-dom": "4.3.1",
     "react-router-redux": "5.0.0-alpha.6",
@@ -48,6 +50,7 @@
     "babel-eslint": "8.2.6",
     "babel-jest": "23.4.2",
     "babel-loader": "7.1.5",
+    "babel-plugin-emotion": "9.2.10",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.14",
     "babel-polyfill": "6.26.0",
@@ -132,47 +135,6 @@
       "raf/polyfill",
       "./tools/enzymeTestAdapterSetup.js"
     ]
-  },
-  "babel": {
-    "env": {
-      "development": {
-        "presets": [
-          "env",
-          "react",
-          "stage-1"
-        ]
-      },
-      "production": {
-        "presets": [
-          [
-            "env",
-            {
-              "es2015": {
-                "modules": false
-              },
-              "targets": {
-                "ie": 9,
-                "uglify": true
-              }
-            }
-          ],
-          "react",
-          "stage-1"
-        ],
-        "plugins": [
-          "react-hot-loader/babel",
-          "transform-react-constant-elements",
-          "transform-react-remove-prop-types"
-        ]
-      },
-      "test": {
-        "presets": [
-          "env",
-          "react",
-          "stage-1"
-        ]
-      }
-    }
   },
   "eslintConfig": {
     "root": true,
