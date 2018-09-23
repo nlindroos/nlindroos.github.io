@@ -6,6 +6,11 @@ import { scaleRotate as Menu } from 'react-burger-menu';
 import { connect } from 'react-redux';
 import { decorator as reduxBurgerMenu, action as toggleMenu } from 'redux-burger-menu';
 import { NavLink } from 'react-router-dom';
+import styled from 'react-emotion';
+
+const NavText = styled(NavLink)`
+  color: white;
+`;
 
 // export default reduxBurgerMenu(Menu);
 const BoundMenu = reduxBurgerMenu(Menu);
@@ -25,7 +30,7 @@ class BurgerMenu extends React.Component {
         outerContainerId="body"
         right
       >
-        <NavLink
+        <NavText
           to="/"
           onClick={() => {
             this.closeMenu();
@@ -34,7 +39,7 @@ class BurgerMenu extends React.Component {
           // className={styles.ownName}
         >
           Niklas Lindroos
-        </NavLink>
+        </NavText>
         <hr />
         <NavLink
           to="/about"
@@ -58,7 +63,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  () => ({}),
-  mapDispatchToProps
-)(BurgerMenu);
+export default connect(() => ({}), mapDispatchToProps)(BurgerMenu);
