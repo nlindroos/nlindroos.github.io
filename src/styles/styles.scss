@@ -1,5 +1,4 @@
-
-// @import "~normalize.css";
+@import '~normalize.css';
 // @import "~flexboxgrid";
 
 // Import global styling here. The majority of styling is consumed locally in a
@@ -7,34 +6,20 @@
 // @import "burger-menu.scss";
 // @import "variables.scss";
 
-
-/* Styles */
 body {
-    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    // line-height: 1.4em;
-    min-width: 230px;
-    color: #4d4d4d;
-    // background: $white;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    font-weight: 300;
-    margin: 0;
-    height: 100%;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  // line-height: 1.4em;
+  min-width: 230px;
+  color: #4d4d4d;
+  // background: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
 }
 
 // css-loader's module loading requires global classes to be prefixed by :global
-:global .content {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-html, body {
-    height: 100%;
-}
-
-@font-face {
-    font-family: allura;
-    src: url("../assets/fonts/allura/Allura-Regular.otf");
+html,
+body {
+  height: 100%;
 }

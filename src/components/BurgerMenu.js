@@ -10,6 +10,7 @@ import styled from 'react-emotion';
 
 const NavText = styled(NavLink)`
   color: white;
+  text-decoration: none;
 `;
 
 // export default reduxBurgerMenu(Menu);
@@ -23,13 +24,7 @@ class BurgerMenu extends React.Component {
 
   render() {
     return (
-      <BoundMenu
-        ref={_ => (this._BurgerMenu = _)}
-        className="burger-menu-wrapper"
-        pageWrapId="page-wrap"
-        outerContainerId="body"
-        right
-      >
+      <BoundMenu className="burger-menu-wrapper" pageWrapId="main-content" outerContainerId="body" right>
         <NavText
           to="/"
           onClick={() => {
@@ -41,13 +36,17 @@ class BurgerMenu extends React.Component {
           Niklas Lindroos
         </NavText>
         <hr />
-        <NavLink
+        <NavText
           to="/about"
           onClick={this.closeMenu}
           // className={styles.link}
         >
           About
-        </NavLink>
+        </NavText>
+
+        <NavText to="/about" onClick={this.closeMenu}>
+          Recommended reading
+        </NavText>
       </BoundMenu>
     );
   }
@@ -63,4 +62,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(() => ({}), mapDispatchToProps)(BurgerMenu);
+export default connect(
+  () => ({}),
+  mapDispatchToProps
+)(BurgerMenu);

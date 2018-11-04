@@ -4,6 +4,7 @@ import { NavLink, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { hot } from 'react-hot-loader';
+import styled from 'react-emotion';
 
 import AboutPage from './views/AboutPage';
 import HomePage from './views/HomePage';
@@ -14,13 +15,24 @@ import BurgerMenu from './components/BurgerMenu';
 // component at the top-level.
 // import './styles/burger-menu.css';
 
+const MainContainer = styled.div`
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 10px;
+
+  @font-face {
+    font-family: allura;
+    src: url('../assets/fonts/allura/Allura-Regular.otf');
+  }
+`;
+
 class App extends React.Component {
   render() {
     const activeStyle = { color: 'blue' };
     return (
-      <div>
+      <React.Fragment>
         <BurgerMenu />
-        <div id="page-wrap" className="content">
+        <MainContainer id="main-content">
           <NavLink exact to="/" activeStyle={activeStyle}>
             Home
           </NavLink>
@@ -37,8 +49,8 @@ class App extends React.Component {
             <Route path="/about" component={AboutPage} />
             <Route component={NotFoundPage} />
           </Switch>
-        </div>
-      </div>
+        </MainContainer>
+      </React.Fragment>
     );
   }
 }

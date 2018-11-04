@@ -1,6 +1,6 @@
 # Personal website
 
-This repository contains the source code for niklaslindroos.fi.
+This repository contains the source code for [niklaslindroos.fi](http://niklaslindroos.fi/).
 
 ## All you need to know
 

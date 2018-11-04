@@ -31,6 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "emotion": "9.2.10",
+    "normalize.css": "8.0.0",
     "object-assign": "4.1.1",
     "react": "16.4.2",
     "react-burger-menu": "2.5.2",
@@ -50,7 +51,7 @@
     "babel-eslint": "8.2.6",
     "babel-jest": "23.4.2",
     "babel-loader": "7.1.5",
-    "babel-plugin-emotion": "9.2.10",
+    "babel-plugin-emotion": "9.2.11",
     "babel-plugin-transform-react-constant-elements": "6.23.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.14",
     "babel-polyfill": "6.26.0",
