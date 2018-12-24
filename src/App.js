@@ -1,5 +1,4 @@
-/* eslint-disable import/no-named-as-default */
-import { NavLink, Route, Switch } from 'react-router-dom';
+import { /*  NavLink,  */ Route, Switch } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -9,6 +8,7 @@ import styled from 'react-emotion';
 import AboutPage from './views/AboutPage';
 import HomePage from './views/HomePage';
 import NotFoundPage from './views/NotFoundPage';
+import RecommendedReadingPage from './views/RecommendedReadingPage';
 import BurgerMenu from './components/BurgerMenu';
 // This is a class-based component because the current
 // version of hot reloading won't hot reload a stateless
@@ -28,12 +28,13 @@ const MainContainer = styled.div`
 
 class App extends React.Component {
   render() {
-    const activeStyle = { color: 'blue' };
+    // const activeStyle = { color: 'blue' };
     return (
       <React.Fragment>
         <BurgerMenu />
+
         <MainContainer id="main-content">
-          <NavLink exact to="/" activeStyle={activeStyle}>
+          {/* <NavLink exact to="/" activeStyle={activeStyle}>
             Home
           </NavLink>
           {' | '}
@@ -43,10 +44,12 @@ class App extends React.Component {
           {' | '}
           <NavLink to="/about" activeStyle={activeStyle}>
             About
-          </NavLink>
+          </NavLink> */}
+
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/about" component={AboutPage} />
+            <Route path="/recommended" component={RecommendedReadingPage} />
             <Route component={NotFoundPage} />
           </Switch>
         </MainContainer>

@@ -8,7 +8,7 @@ import { decorator as reduxBurgerMenu, action as toggleMenu } from 'redux-burger
 import { NavLink } from 'react-router-dom';
 import styled from 'react-emotion';
 
-const NavText = styled(NavLink)`
+const NavTextButton = styled(NavLink)`
   color: white;
   text-decoration: none;
 `;
@@ -25,7 +25,7 @@ class BurgerMenu extends React.Component {
   render() {
     return (
       <BoundMenu className="burger-menu-wrapper" pageWrapId="main-content" outerContainerId="body" right>
-        <NavText
+        <NavTextButton
           to="/"
           onClick={() => {
             this.closeMenu();
@@ -34,19 +34,19 @@ class BurgerMenu extends React.Component {
           // className={styles.ownName}
         >
           Niklas Lindroos
-        </NavText>
+        </NavTextButton>
         <hr />
-        <NavText
+        <NavTextButton
           to="/about"
           onClick={this.closeMenu}
           // className={styles.link}
         >
           About
-        </NavText>
+        </NavTextButton>
 
-        <NavText to="/about" onClick={this.closeMenu}>
+        <NavTextButton to="/recommended" onClick={this.closeMenu}>
           Recommended reading
-        </NavText>
+        </NavTextButton>
       </BoundMenu>
     );
   }
