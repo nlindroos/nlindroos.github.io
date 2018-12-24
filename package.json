@@ -30,10 +30,13 @@
   "author": "Niklas Lindroos",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "3.6.1",
     "emotion": "9.2.10",
+    "lodash": "4.17.11",
     "normalize.css": "8.0.0",
     "object-assign": "4.1.1",
     "react": "16.4.2",
+    "react-autosuggest": "9.4.2",
     "react-burger-menu": "2.5.2",
     "react-dom": "16.4.2",
     "react-emotion": "9.2.10",
@@ -42,7 +45,8 @@
     "react-router-redux": "5.0.0-alpha.6",
     "redux": "4.0.0",
     "redux-burger-menu": "0.2.7",
-    "redux-thunk": "2.3.0"
+    "redux-thunk": "2.3.0",
+    "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
     "autoprefixer": "9.1.0",
