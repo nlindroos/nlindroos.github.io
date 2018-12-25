@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { get } from 'lodash';
 // import Select from 'react-select';
 import Autosuggest from 'react-autosuggest';
 import TextField from '@material-ui/core/TextField';
+
+import { getRecommendedReading } from '../actions/contentfulActions';
 // import '../styles/about-page.css';
 
 const recommendedReading = [
@@ -39,7 +43,7 @@ class RecommendedReadingPage extends Component {
   };
 
   componentDidMount() {
-    // @@TODO Fetch articles
+    this.props.getRecommendedReading();
   }
 
   handleChange = (event, { newValue: filter }) => {
@@ -62,7 +66,7 @@ class RecommendedReadingPage extends Component {
     const { filter, suggestions } = this.state;
 
     const inputProps = {
-      placeholder: 'Just start typing',
+      placeholder: 'Just start typing a title or topic',
       value: filter,
       onChange: this.handleChange,
     };
@@ -86,4 +90,15 @@ class RecommendedReadingPage extends Component {
   }
 }
 
-export default RecommendedReadingPage;
+RecommendedReadingPage.propTypes = {
+  getRecommendedReading: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = {
+  getRecommendedReading,
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(RecommendedReadingPage);

@@ -5,6 +5,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import styled from 'react-emotion';
 
+import Contentful from './services/contentfulClient';
 import AboutPage from './views/AboutPage';
 import HomePage from './views/HomePage';
 import NotFoundPage from './views/NotFoundPage';
@@ -27,6 +28,10 @@ const MainContainer = styled.div`
 `;
 
 class App extends React.Component {
+  componentDidMount() {
+    Contentful.initialise();
+  }
+
   render() {
     // const activeStyle = { color: 'blue' };
     return (
