@@ -8,6 +8,8 @@ import { decorator as reduxBurgerMenu, action as toggleMenu } from 'redux-burger
 import { NavLink } from 'react-router-dom';
 import styled from 'react-emotion';
 
+import '../styles/burger-menu.css';
+
 const NavTextButton = styled(NavLink)`
   color: white;
   text-decoration: none;
@@ -15,11 +17,10 @@ const NavTextButton = styled(NavLink)`
 
 // export default reduxBurgerMenu(Menu);
 const BoundMenu = reduxBurgerMenu(Menu);
-import '../styles/burger-menu.css';
 
 class BurgerMenu extends React.Component {
   closeMenu = () => {
-    this.props.dispatch(toggleMenu(false));
+    this.props.closeMenu();
   };
 
   render() {
@@ -53,14 +54,12 @@ class BurgerMenu extends React.Component {
 }
 
 BurgerMenu.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  closeMenu: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    dispatch,
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  closeMenu: () => dispatch(toggleMenu(false)),
+});
 
 export default connect(
   null,

@@ -6,6 +6,8 @@ import 'airbnb-browser-shims';
 
 import App from './App';
 
+// The root can't be a SFC.
+// eslint-disable-next-line react/prefer-stateless-function
 export default class Root extends Component {
   render() {
     const { store, history } = this.props;
@@ -20,6 +22,6 @@ export default class Root extends Component {
 }
 
 Root.propTypes = {
-  store: PropTypes.object.isRequired,
-  history: PropTypes.object.isRequired,
+  store: PropTypes.shape().isRequired,
+  history: PropTypes.shape().isRequired,
 };

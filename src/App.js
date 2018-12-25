@@ -1,6 +1,5 @@
 import { /*  NavLink,  */ Route, Switch } from 'react-router-dom';
 
-import PropTypes from 'prop-types';
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import styled from 'react-emotion';
@@ -62,9 +61,5 @@ class App extends React.Component {
     );
   }
 }
-
-App.propTypes = {
-  children: PropTypes.element,
-};
 
 export default hot(module)(App);
