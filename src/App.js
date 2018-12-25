@@ -14,6 +14,7 @@ import BurgerMenu from './components/BurgerMenu';
 // version of hot reloading won't hot reload a stateless
 // component at the top-level.
 // import './styles/burger-menu.css';
+import 'normalize.css';
 
 const MainContainer = styled.div`
   max-width: 1080px;

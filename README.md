@@ -34,3 +34,7 @@ yarn build
 | [Prettier](https://prettier.io/)                                | Unified code styling.                                |
 
 in addition to a number of third-party libraries.
+
+## TODO
+
+- [ ] Move away from deprecated react-router-redux. Use [Redux Integration](react-router-redux) or [connected-react-router](https://github.com/supasate/connected-react-router) instead.
