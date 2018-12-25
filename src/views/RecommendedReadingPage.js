@@ -36,6 +36,7 @@ const renderSuggestion = suggestion => <div>{suggestion.title}</div>;
 const renderInput = props => <TextField fullWidth {...props} />;
 
 const getSuggestionValue = suggestion => get(suggestion, 'title', '');
+
 class RecommendedReadingPage extends Component {
   state = {
     filter: '',
