@@ -2,6 +2,14 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
+import dotenv from 'dotenv';
+
+const env = dotenv.config().parsed;
+
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
 
 export default {
   resolve: {
@@ -35,6 +43,7 @@ export default {
       },
       inject: true,
     }),
+    new webpack.DefinePlugin(envKeys),
   ],
   module: {
     rules: [
