@@ -17,6 +17,12 @@
     "jquery": true,
     "jest": true
   },
+  "settings": {
+    "react": {
+      // This is a hack for always validating against the latest react version.
+      "version": "999.999.999"
+    }
+  },
   "globals": {},
   "rules": {
     "react/jsx-filename-extension": 0,
