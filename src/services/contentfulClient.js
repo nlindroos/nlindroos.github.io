@@ -2,6 +2,10 @@ import { createClient } from 'contentful';
 
 import { CONTENT_TYPES } from '../constants/contentfulConstants';
 
+// Utilising both @babel/plugin-proposal-optional-chaining
+// and @babel/plugin-proposal-nullish-coalescing-operator
+const formatEntries = entries => entries.map(entry => entry?.fields ?? {});
+
 class Contentful {
   initialised = false;
 
@@ -19,9 +23,11 @@ class Contentful {
     if (!this.initialised) {
       this.initialise();
     }
-    const recommended = await this.client.getContentType(CONTENT_TYPES.RECOMMENDED);
+    const recommended = await this.client.getEntries({
+      content_type: CONTENT_TYPES.RECOMMENDED,
+    });
 
-    return recommended.toPlainObject();
+    return formatEntries(recommended.items);
   };
 }
 
