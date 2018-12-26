@@ -1,25 +1,15 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { get } from 'lodash';
-// import Select from 'react-select';
 import Autosuggest from 'react-autosuggest';
 import TextField from '@material-ui/core/TextField';
+import Fuse from 'fuse.js';
+import styled from 'react-emotion';
 
 import { getRecommendedReading } from '../actions/contentfulActions';
+import RecommendedReadingRow from '../containers/RecommendedReadingRow';
+import FullScreenLoader from '../components/FullScreenLoader';
 // import '../styles/about-page.css';
-
-// const recommendedReading = [
-//   {
-//     title: 'hey',
-//     link: 'hey1',
-//   },
-//   {
-//     title: 'yo',
-//     link: 'yo1',
-//   },
-// ];
-// ].map(({ title }) => ({ value: title, label: title }));
 
 // const getSuggestions = filter => {
 //   const inputValue = filter.trim().toLowerCase();
@@ -31,11 +21,59 @@ import { getRecommendedReading } from '../actions/contentfulActions';
 //   return recommendedReading.filter(resource => resource.title.toLowerCase().slice(0, inputLength) === inputValue);
 // };
 
-const renderSuggestion = suggestion => <div>{suggestion.title}</div>;
+const fuseOptions = {
+  shouldSort: true,
+  threshold: 0.4,
+  location: 0,
+  distance: 100,
+  maxPatternLength: 12,
+  minMatchCharLength: 1,
 
-const renderInput = props => <TextField fullWidth {...props} />;
+  // tokenize: true,
+  // findAllMatches: true,
+  // includeMatches: true,
+  keys: [
+    // 'tags',
+    // 'title',
+    {
+      name: 'tags',
+      weight: 0.7,
+    },
+    {
+      name: 'title',
+      weight: 0.3,
+    },
+    // {
+    //   name: 'authors',
+    //   weight: 0.2,
+    // },
+  ],
+};
 
-const getSuggestionValue = suggestion => get(suggestion, 'title', '');
+const SuggestionsContainer = styled.div`
+  ul {
+    padding-inline-start: 0px;
+  }
+`;
+
+const renderSuggestionsContainer = ({ containerProps, children }) => (
+  <SuggestionsContainer {...containerProps}>{children}</SuggestionsContainer>
+);
+
+const renderSuggestion = suggestion => <RecommendedReadingRow resource={suggestion} />;
+
+const renderInput = ({ ref, ...rest }) => (
+  <TextField
+    fullWidth
+    {...rest}
+    InputProps={{
+      // Pass the correct ref to react-autosuggest
+      inputRef: _ => ref(_),
+    }}
+  />
+);
+
+const getSuggestionValue = suggestion => suggestion?.title ?? '';
 
 class RecommendedReadingPage extends Component {
   state = {
@@ -43,35 +81,44 @@ class RecommendedReadingPage extends Component {
     suggestions: [],
   };
 
+  fuse = null;
+
   componentDidMount() {
     this.props.getRecommendedReading();
   }
 
-  getSuggestions = filter => {
+  componentDidUpdate(prevProps) {
     const { recommended } = this.props;
-    const inputValue = filter.trim().toLowerCase();
-    const inputLength = inputValue.length;
 
-    if (inputLength === 0) {
-      return recommended;
+    if (recommended.length > prevProps.recommended.length) {
+      this.setState({ suggestions: recommended });
+      this.fuse = new Fuse(recommended, fuseOptions);
     }
-    return recommended.filter(resource => resource.title.toLowerCase().slice(0, inputLength) === inputValue);
-  };
+  }
+
+  getSuggestions = filter => this.fuse.search(filter);
+  // .map(result => {
+  //   // console.log('result', result);
+  //   return result;
+  //   // return result.item;
+  // });
 
   handleChange = (event, { newValue: filter }) => {
     this.setState({ filter });
   };
 
   handleSuggestionsFetchRequested = ({ value }) => {
+    const { recommended } = this.props;
+
     this.setState({
-      suggestions: this.getSuggestions(value),
+      suggestions: value ? this.getSuggestions(value) : recommended,
     });
   };
 
   handleSuggestionsClearRequested = () => {
-    // console.log('clear');
     this.setState({
-      suggestions: [],
+      filter: '',
+      suggestions: this.props.recommended,
     });
   };
 
@@ -83,11 +130,10 @@ class RecommendedReadingPage extends Component {
       placeholder: 'Just start typing a title or topic',
       value: filter,
       onChange: this.handleChange,
+      InputLabelProps: {
+        shrink: true,
+      },
     };
-
-    if (fetching) {
-      return <p>fetching</p>;
-    }
 
     return (
       <div>
@@ -103,7 +149,9 @@ class RecommendedReadingPage extends Component {
           renderSuggestion={renderSuggestion}
           inputProps={inputProps}
           renderInputComponent={renderInput}
+          renderSuggestionsContainer={renderSuggestionsContainer}
         />
+        <FullScreenLoader loading={fetching} />
       </div>
     );
   }

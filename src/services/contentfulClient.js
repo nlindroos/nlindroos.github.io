@@ -2,9 +2,17 @@ import { createClient } from 'contentful';
 
 import { CONTENT_TYPES } from '../constants/contentfulConstants';
 
+const formatEntries = entries =>
+  entries.map(({ fields }) => ({
+    ...fields,
+    // Conditionally add tags
+    ...(fields.tags && { tags: fields.tags.map(tag => tag.fields.name) }),
+    type: fields.type.fields.name,
+  }));
+
 // Utilising both @babel/plugin-proposal-optional-chaining
 // and @babel/plugin-proposal-nullish-coalescing-operator
-const formatEntries = entries => entries.map(entry => entry?.fields ?? {});
+// ({...(entry?.fields ?? {}), ...(entry?.fields?.tags && {tags: entry?.fields?.tags.})}));
 
 class Contentful {
   initialised = false;

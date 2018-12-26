@@ -12,6 +12,7 @@ export const getRecommendedReading = () => async dispatch => {
     const recommendedReading = await Contentful.getRecommendedReading();
 
     // console.log('recommendedReading', recommendedReading);
+    // await new Promise(resolve => setTimeout(resolve, 4000));
 
     dispatch({
       type: types.FETCHING_RECOMMENDED_SUCCESS,
