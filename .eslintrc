@@ -27,6 +27,8 @@
   "rules": {
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
-    "react/destructuring-assignment": 0
+    "react/destructuring-assignment": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/no-did-update-set-state": 0
   }
 }
