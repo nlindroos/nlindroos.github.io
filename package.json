@@ -36,6 +36,7 @@
     "contentful": "^7.0.5",
     "dotenv": "^6.2.0",
     "emotion": "^9.2.10",
+    "fuse.js": "3.3.0",
     "history": "^4.7.2",
     "lodash": "^4.17.11",
     "normalize.css": "^8.0.0",
@@ -50,6 +51,7 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^5.0.0-alpha.6",
+    "react-spinners": "0.4.8",
     "redux": "^4.0.0",
     "redux-burger-menu": "^0.2.7",
     "redux-immutable-state-invariant": "^2.1.0",
@@ -80,6 +82,7 @@
     "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.0",
     "babel-plugin-emotion": "9.2.11",
+    "babel-plugin-react-require": "3.0.1",
     "babel-plugin-transform-react-remove-prop-types": "0.4.14",
     "babel-preset-airbnb": "3.2.0",
     "babel-runtime": "6.26.0",
@@ -143,7 +146,7 @@
   "lint-staged": {
     "*.js": [
       "prettier",
-      "eslint .",
+      "eslint",
       "git add"
     ],
     "*.json": [

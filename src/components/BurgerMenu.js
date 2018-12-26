@@ -1,6 +1,6 @@
 // Decorate react-burger-menu
 
-import React from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { scaleRotate as Menu } from 'react-burger-menu';
 import { connect } from 'react-redux';
@@ -18,7 +18,7 @@ const NavTextButton = styled(NavLink)`
 // export default reduxBurgerMenu(Menu);
 const BoundMenu = reduxBurgerMenu(Menu);
 
-class BurgerMenu extends React.Component {
+class BurgerMenu extends Component {
   closeMenu = () => {
     this.props.closeMenu();
   };

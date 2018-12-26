@@ -2,7 +2,6 @@
 
 // Import global styling here. The majority of styling is consumed locally in a
 // component by using css-loader's module loading.
-// @import "burger-menu.scss";
 // @import "variables.scss";
 
 body {
@@ -17,7 +16,6 @@ body {
   font-weight: 300;
 }
 
-// css-loader's module loading requires global classes to be prefixed by :global
 html,
 body {
   height: 100%;

@@ -1,6 +1,6 @@
 import { /*  NavLink,  */ Route, Switch } from 'react-router-dom';
 
-import React from 'react';
+import { Component, Fragment } from 'react';
 import { hot } from 'react-hot-loader';
 import styled from 'react-emotion';
 
@@ -14,7 +14,6 @@ import BurgerMenu from './components/BurgerMenu';
 // version of hot reloading won't hot reload a stateless
 // component at the top-level.
 // import './styles/burger-menu.css';
-import 'normalize.css';
 
 const MainContainer = styled.div`
   max-width: 1080px;
@@ -27,7 +26,7 @@ const MainContainer = styled.div`
   }
 `;
 
-class App extends React.Component {
+class App extends Component {
   componentDidMount() {
     Contentful.initialise();
   }
@@ -35,7 +34,7 @@ class App extends React.Component {
   render() {
     // const activeStyle = { color: 'blue' };
     return (
-      <React.Fragment>
+      <Fragment>
         <BurgerMenu />
 
         <MainContainer id="main-content">
@@ -58,7 +57,7 @@ class App extends React.Component {
             <Route component={NotFoundPage} />
           </Switch>
         </MainContainer>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
