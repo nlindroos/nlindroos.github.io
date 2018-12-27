@@ -25,9 +25,9 @@ yarn build
 | [React Router](https://github.com/reactjs/react-router)         | Routing library.                                     |
 | [Flexbox Grid](http://flexboxgrid.com/)                         | Provides the grid system for the layout of the page. |
 | [Babel](https://babeljs.io/)                                    | Traspiler of advanced EcmaScript features.           |
-| [Webpack](https://webpack.js.org/)                              |  Module/asset/resource bundler.                      |
+| [Webpack](https://webpack.js.org/)                              | Module/asset/resource bundler.                       |
 | [Jest](https://facebook.github.io/jest/)                        | Test framework.                                      |
-| [Enzyme](https://github.com/airbnb/enzyme)                      |  DOM testing using snapshots.                        |
+| [Enzyme](https://github.com/airbnb/enzyme)                      | DOM testing using snapshots.                         |
 | [emotion](https://emotion.sh/)                                  | CSS-in-JS library.                                   |
 | [SASS](http://sass-lang.com/)                                   | For styling.                                         |
 | [ESLint](http://eslint.org/)                                    | De facto solution for linting JavaScript.            |
@@ -36,5 +36,3 @@ yarn build
 in addition to a number of third-party libraries.
 
 ## TODO
-
-- [ ] Move away from deprecated react-router-redux. Use [Redux Integration](react-router-redux) or [connected-react-router](https://github.com/supasate/connected-react-router) instead.
