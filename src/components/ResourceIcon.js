@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import { css } from 'react-emotion';
-import { Headset } from '@material-ui/icons';
-
-// import colours from '../constants/colours';
+import { Book, FormatAlignLeft, Headset, ImportContacts, WebRounded } from '@material-ui/icons';
 
 const typeMap = {
   Podcast: Headset,
-  // 'White Paper':
+  Book,
+  Website: WebRounded,
+  'White Paper': FormatAlignLeft,
+  Article: ImportContacts,
 };
 
 const icon = css`
