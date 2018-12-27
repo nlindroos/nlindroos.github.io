@@ -11,16 +11,6 @@ import RecommendedReadingRow from '../containers/RecommendedReadingRow';
 import FullScreenLoader from '../components/FullScreenLoader';
 // import '../styles/about-page.css';
 
-// const getSuggestions = filter => {
-//   const inputValue = filter.trim().toLowerCase();
-//   const inputLength = inputValue.length;
-
-//   if (inputLength === 0) {
-//     return recommendedReading;
-//   }
-//   return recommendedReading.filter(resource => resource.title.toLowerCase().slice(0, inputLength) === inputValue);
-// };
-
 const fuseOptions = {
   shouldSort: true,
   threshold: 0.4,

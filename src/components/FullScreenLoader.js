@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { ClimbingBoxLoader } from 'react-spinners';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 
 import colours from '../constants/colours';
 
@@ -10,19 +10,10 @@ const FullScreenContainer = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-
   background-color: ${colours.backgroundTransparent};
-  // justify-content: center;
-  // align-items: center;
-`;
-
-// const Loader = styled(ClimbingBoxLoader)`
-//   position: initial !important;
-// `;
-
-const overrided = css`
-  // Need to use !important to override react-spinner's css.
-  position: initial !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 // @@TODO Should maybe be inserted in App.js? or somewhere where it's correctly
@@ -32,7 +23,6 @@ const FullScreenLoader = ({ loading }) =>
   loading && (
     <FullScreenContainer>
       <ClimbingBoxLoader
-        className={overrided}
         sizeUnit="vmin"
         size={3}
         color={colours.greenLight}
@@ -44,4 +34,5 @@ const FullScreenLoader = ({ loading }) =>
 FullScreenLoader.propTypes = {
   loading: PropTypes.bool.isRequired,
 };
+
 export default FullScreenLoader;
