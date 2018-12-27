@@ -12,4 +12,5 @@ export default {
   yellowDark: '#fce181',
   grey: '#edeae5',
   backgroundTransparent: 'rgba(0, 0, 0, 0.1)',
+  white: '#ffffff',
 };

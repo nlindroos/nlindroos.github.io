@@ -1,9 +1,11 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'react-router-redux';
+import { MuiThemeProvider } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
 import 'airbnb-browser-shims';
 
+import theme from './styles/theme';
 import App from './App';
 
 // The root can't be a SFC.
@@ -14,7 +16,9 @@ export default class Root extends Component {
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <App />
+          <MuiThemeProvider theme={theme}>
+            <App />
+          </MuiThemeProvider>
         </ConnectedRouter>
       </Provider>
     );
